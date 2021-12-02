@@ -11,7 +11,7 @@ int main(int argc, char **argv)
   // TODO: Integrate QT5 Application with ROS
   QApplication app( argc, argv );
 
-  MuskyRviz* muskyRviz = new muskyRviz();
+  MuskyRviz* muskyRviz = new MuskyRviz();
   muskyRviz->show();
 
   app.exec();
