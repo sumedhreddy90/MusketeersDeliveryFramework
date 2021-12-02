@@ -1,5 +1,5 @@
-#ifndef ROBOTDISPLAYGROUP_H
-#define ROBOTDISPLAYGROUP_H
+#ifndef MUSKYDISPLAYGROUP_H
+#define MUSKYDISPLAYGROUP_H
 
 #include "rviz/display_group.h"
 #include <string>
@@ -64,4 +64,4 @@ private:
 };
 
 
-#endif // ROBOTDISPLAYGROUP_H
+#endif // MUSKYDISPLAYGROUP_H
