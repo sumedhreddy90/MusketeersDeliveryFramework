@@ -1,0 +1,29 @@
+<launch>
+
+  <arg name="namespace" default="hsk01" />
+  <arg name="tfpre" default="$(arg namespace)_tf" />
+  <arg name="robot_name"  default="husky_$(arg namespace)" />
+  <arg name="laser_enabled" default="true"/>
+  <arg name="kinect_enabled" default="false"/>
+  <arg name="realsense_enabled" default="false"/>
+  <arg name="initX" default="7.2" />
+  <arg name="initY" default="-2.2" />
+  <arg name="initYaw" default="0" />
+
+  <group ns="$(arg namespace)">
+    <include file="$(find musketeers)/launch/include/musky.launch">
+      <arg name="namespace" value="$(arg namespace)" />
+      <arg name="tfpre" value="$(arg tfpre)" />
+      <arg name="robot_name"  value="$(arg robot_name)" />
+      <arg name="initX" value="$(arg initX)" />
+      <arg name="initY" value="$(arg initY)" />
+      <arg name="initYaw" value="$(arg initYaw)" />
+      <arg name="laser_enabled" value="$(arg laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg realsense_enabled)" />
+    </include>
+    <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" 
+        args="$(arg initX) $(arg initY) 0 $(arg initYaw) 0 0 map $(arg tfpre)/odom 100" />
+  </group>
+
+  </launch>
