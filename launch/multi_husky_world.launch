@@ -1,0 +1,31 @@
+<launch>
+  <arg name="use_sim_time" default="true" />
+  <arg name="gui" default="true" />
+  <arg name="headless" default="false" />
+  <arg name="world_name" default="$(find musketeers)/worlds/custom.world" />
+ 
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="debug" value="0" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="use_sim_time" value="$(arg use_sim_time)" />
+    <arg name="headless" value="$(arg headless)" />
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="paused" value="false"/>
+  </include>
+  <include file="$(find musketeers)/launch/include/robots.launch" />
+  
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find musketeers)/rviz/robot.rviz" />
+
+
+  
+</launch>
+
+
+
+
+
+  
+
+
