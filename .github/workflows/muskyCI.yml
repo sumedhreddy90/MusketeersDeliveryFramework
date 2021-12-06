@@ -38,7 +38,7 @@ jobs:
           sudo rosdep init
           rosdep update
           mkdir -p ~/catkin_ws/src
-          ln -s $GITHUB_WORKSPACE ~/catkin_ws/src/
+          ln -s $GITHUB_WORKSPACE ~/catkin_ws/src/MusketeersDeliveryFramework
           cd ~/catkin_ws
           rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
           rosdep install --from-paths src --ignore-src -r -y
@@ -55,5 +55,5 @@ jobs:
       - name: lint
         run: |
           cd ~/catkin_ws
-          catkin build frei0r_image --no-deps --catkin-make-args roslint
+          catkin build MusketeersDeliveryFramework --no-deps --catkin-make-args roslint
 
