@@ -1,6 +1,9 @@
 # Musketeers: Autonomous pickup and delivery fleet
 
-[![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](LICENSE.md)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+![example workflow](https://github.com/sumedhreddy90/MusketeersDeliveryFramework/actions/workflows/muskyCI.yml/badge.svg)
+
 
 ## Overview
 The rapid rise of e-commerce services in the last decade, and its forecast for the future, have proved that the need for delivery services will be increasing, which needs to be addressed by improving the delivery infrastructure. Developments in technology have now made it possible to provide an autonomous solution, which can revolutionize the industry by
@@ -9,7 +12,7 @@ this task without the need for human intervention. \
 In this project, we propose a fleet of autonomous delivery
 robots, called Musky, that can provide transportation services
 for various kinds of small to medium-sized goods(<10 lbs)
-for short-range hauling(<5 Miles).
+for short-range hauling(<5 Miles) using Multi Fleet GPS Waypoint Navigation.
 
 ### UML
 [Quad Chart](https://drive.google.com/file/d/112d7ZOfGakJW6sQtDZE99uixeMIY7aPG/view?usp=sharing) \
@@ -19,19 +22,28 @@ for short-range hauling(<5 Miles).
 
 
 ### AIP Document 
-[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](https://docs.google.com/spreadsheets/d/1ULTNvGetic1YF69uuCX7t-CtU-yicrW0z6M5p8Y3zxk/edit?usp=sharing)
+[![Doc Link](https://img.shields.io/badge/Doc-link-blue)](https://docs.google.com/spreadsheets/d/1ULTNvGetic1YF69uuCX7t-CtU-yicrW0z6M5p8Y3zxk/edit?usp=sharing)
+
+### Sprint Planning 
+[![Doc Link](https://img.shields.io/badge/Doc-link-blue)](https://docs.google.com/document/d/1PARTqCdQkq0k0sgHWpRNl_M1ng2w7DdYFu71zwEIHzk/edit?usp=sharing)
+
 
 ## Assumptions
-* It is assumed that the streets do not have any
+* The streets do not have any
 traffic or traffic signals, hence the robot can navigate freely
 on the pedestrian paths, except for a few obstacles along the
 way.
-* It is assumed that the obstacles present on the
+* The obstacles present on the
 pedestrian paths are of dimensions such that they do not block
 the complete pathway and will allow the robot to maneuver
 around it.
-* It is assumed that the paths are even and do
+* The paths are even and do
 not contain extreme slopes.
+
+## Project tested on
+
+* Ubuntu 20.04 using Noetic 
+* Ubuntu 18.04 using Melodic
 
 ## Technologies
 *Programing language*: C++
@@ -47,6 +59,7 @@ not contain extreme slopes.
 ## Algorithms
 
 - husky_navigation package, which uses gmapping, move_base and frontier_exploration [BSD-3-Clause License].
+- GPS Waypoint Navigation
 
 ## Risk and Mitigations
 
