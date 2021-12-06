@@ -1,0 +1,457 @@
+<launch>
+  
+<!--  ..............................  ROBOT1  .....................................  -->
+  <arg name="r1_namespace" value="hsk01" />
+  <arg name="r1_tfpre" value="$(arg r1_namespace)_tf" />
+  <arg name="r1_robot_name"  value="husky_$(arg r1_namespace)" />
+  <arg name="r1_laser_enabled" default="true"/>
+  <arg name="r1_kinect_enabled" default="false"/>
+  <arg name="r1_realsense_enabled" default="false"/>
+  <arg name="r1_initX" value="-88" />
+  <arg name="r1_initY" value="-1" />
+  <arg name="r1_initYaw" value="0" />
+  <arg name="r1_scanTopic" value="scan" />
+  <arg name="r1_baseFrame" value="$(arg r1_tfpre)/base_link" />
+  <arg name="r1_odomFrame" value="$(arg r1_tfpre)/odom" />
+
+
+  <group ns="$(arg r1_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r1_namespace)" />
+      <arg name="tfpre" value="$(arg r1_tfpre)" />
+      <arg name="robot_name"  value="$(arg r1_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r1_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r1_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r1_realsense_enabled)" />
+      <arg name="initX" value="$(arg r1_initX)" />
+      <arg name="initY" value="$(arg r1_initY)" />
+      <arg name="initYaw" value="$(arg r1_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r1_namespace)" />
+      <arg name="tfpre" value="$(arg r1_tfpre)" />
+      <arg name="scan_topic" value="$(arg r1_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r1_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r1_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r1_initX)" />
+      <arg name="initial_pose_y" value="$(arg r1_initY)" />
+      <arg name="initial_pose_a" value="$(arg r1_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r1_namespace)" />
+      <arg name="tfpre" value="$(arg r1_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r1_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r1_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r1_scanTopic)" />
+    </include>
+  </group>
+  
+<!--  ..............................  ROBOT2  ......................................  -->
+  <arg name="r2_namespace" value="hsk02" />
+  <arg name="r2_tfpre" value="$(arg r2_namespace)_tf" />
+  <arg name="r2_robot_name"  value="husky_$(arg r2_namespace)" />
+  <arg name="r2_laser_enabled" default="true"/>
+  <arg name="r2_kinect_enabled" default="false"/>
+  <arg name="r2_realsense_enabled" default="false"/>
+  <arg name="r2_initX" value="-88" />
+  <arg name="r2_initY" value="1" />
+  <arg name="r2_initYaw" value="0" />
+  <arg name="r2_scanTopic" value="scan" />
+  <arg name="r2_baseFrame" value="$(arg r2_tfpre)/base_link" />
+  <arg name="r2_odomFrame" value="$(arg r2_tfpre)/odom" />
+
+  <group ns="$(arg r2_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r2_namespace)" />
+      <arg name="tfpre" value="$(arg r2_tfpre)" />
+      <arg name="robot_name"  value="$(arg r2_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r2_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r2_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r2_realsense_enabled)" />
+      <arg name="initX" value="$(arg r2_initX)" />
+      <arg name="initY" value="$(arg r2_initY)" />
+      <arg name="initYaw" value="$(arg r2_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r2_namespace)" />
+      <arg name="tfpre" value="$(arg r2_tfpre)" />
+      <arg name="scan_topic" value="$(arg r2_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r2_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r2_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r2_initX)" />
+      <arg name="initial_pose_y" value="$(arg r2_initY)" />
+      <arg name="initial_pose_a" value="$(arg r2_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r2_namespace)" />
+      <arg name="tfpre" value="$(arg r2_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r2_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r2_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r2_scanTopic)" />
+    </include>
+  </group>
+
+  <!-- ..............................  ROBOT3  ..................................... -->
+  <arg name="r3_namespace" value="hsk03" />
+  <arg name="r3_tfpre" value="$(arg r3_namespace)_tf" />
+  <arg name="r3_robot_name"  value="husky_$(arg r3_namespace)" />
+  <arg name="r3_laser_enabled" default="true"/>
+  <arg name="r3_kinect_enabled" default="false"/>
+  <arg name="r3_realsense_enabled" default="false"/>
+  <arg name="r3_initX" value="-88" />
+  <arg name="r3_initY" value="0" />
+  <arg name="r3_initYaw" value="0" />
+  <arg name="r3_scanTopic" value="scan" />
+  <arg name="r3_baseFrame" value="$(arg r3_tfpre)/base_link" />
+  <arg name="r3_odomFrame" value="$(arg r3_tfpre)/odom" />
+
+  <group ns="$(arg r3_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r3_namespace)" />
+      <arg name="tfpre" value="$(arg r3_tfpre)" />
+      <arg name="robot_name"  value="$(arg r3_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r3_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r3_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r3_realsense_enabled)" />
+      <arg name="initX" value="$(arg r3_initX)" />
+      <arg name="initY" value="$(arg r3_initY)" />
+      <arg name="initYaw" value="$(arg r3_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r3_namespace)" />
+      <arg name="tfpre" value="$(arg r3_tfpre)" />
+      <arg name="scan_topic" value="$(arg r3_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r3_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r3_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r3_initX)" />
+      <arg name="initial_pose_y" value="$(arg r3_initY)" />
+      <arg name="initial_pose_a" value="$(arg r3_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r3_namespace)" />
+      <arg name="tfpre" value="$(arg r3_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r3_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r3_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r3_scanTopic)" />
+    </include>
+  </group>
+  
+  <!-- ..............................  ROBOT4  ..................................... -->
+  <arg name="r4_namespace" value="hsk04" />
+  <arg name="r4_tfpre" value="$(arg r4_namespace)_tf" />
+  <arg name="r4_robot_name"  value="husky_$(arg r4_namespace)" />
+  <arg name="r4_laser_enabled" default="true"/>
+  <arg name="r4_kinect_enabled" default="false"/>
+  <arg name="r4_realsense_enabled" default="false"/>
+  <arg name="r4_initX" value="-88" />
+  <arg name="r4_initY" value="-2" />
+  <arg name="r4_initYaw" value="0" />
+  <arg name="r4_scanTopic" value="scan" />
+  <arg name="r4_baseFrame" value="$(arg r4_tfpre)/base_link" />
+  <arg name="r4_odomFrame" value="$(arg r4_tfpre)/odom" />
+
+  <group ns="$(arg r4_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r4_namespace)" />
+      <arg name="tfpre" value="$(arg r4_tfpre)" />
+      <arg name="robot_name"  value="$(arg r4_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r4_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r4_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r4_realsense_enabled)" />
+      <arg name="initX" value="$(arg r4_initX)" />
+      <arg name="initY" value="$(arg r4_initY)" />
+      <arg name="initYaw" value="$(arg r4_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r4_namespace)" />
+      <arg name="tfpre" value="$(arg r4_tfpre)" />
+      <arg name="scan_topic" value="$(arg r4_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r4_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r4_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r4_initX)" />
+      <arg name="initial_pose_y" value="$(arg r4_initY)" />
+      <arg name="initial_pose_a" value="$(arg r4_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r4_namespace)" />
+      <arg name="tfpre" value="$(arg r4_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r4_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r4_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r4_scanTopic)" />
+    </include>
+  </group>
+  
+  <!-- ..............................  ROBOT5  ..................................... -->
+  <arg name="r5_namespace" value="hsk05" />
+  <arg name="r5_tfpre" value="$(arg r5_namespace)_tf" />
+  <arg name="r5_robot_name"  value="husky_$(arg r5_namespace)" />
+  <arg name="r5_laser_enabled" default="true"/>
+  <arg name="r5_kinect_enabled" default="false"/>
+  <arg name="r5_realsense_enabled" default="false"/>
+  <arg name="r5_initX" value="-88" />
+  <arg name="r5_initY" value="2" />
+  <arg name="r5_initYaw" value="0" />
+  <arg name="r5_scanTopic" value="scan" />
+  <arg name="r5_baseFrame" value="$(arg r5_tfpre)/base_link" />
+  <arg name="r5_odomFrame" value="$(arg r5_tfpre)/odom" />
+
+  <group ns="$(arg r5_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r5_namespace)" />
+      <arg name="tfpre" value="$(arg r5_tfpre)" />
+      <arg name="robot_name"  value="$(arg r5_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r5_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r5_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r5_realsense_enabled)" />
+      <arg name="initX" value="$(arg r5_initX)" />
+      <arg name="initY" value="$(arg r5_initY)" />
+      <arg name="initYaw" value="$(arg r5_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r5_namespace)" />
+      <arg name="tfpre" value="$(arg r5_tfpre)" />
+      <arg name="scan_topic" value="$(arg r5_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r5_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r5_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r5_initX)" />
+      <arg name="initial_pose_y" value="$(arg r5_initY)" />
+      <arg name="initial_pose_a" value="$(arg r5_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r5_namespace)" />
+      <arg name="tfpre" value="$(arg r5_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r5_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r5_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r5_scanTopic)" />
+    </include>
+  </group>
+  
+  <!-- ..............................  ROBOT6  ..................................... -->
+  <arg name="r6_namespace" value="hsk06" />
+  <arg name="r6_tfpre" value="$(arg r6_namespace)_tf" />
+  <arg name="r6_robot_name"  value="husky_$(arg r6_namespace)" />
+  <arg name="r6_laser_enabled" default="true"/>
+  <arg name="r6_kinect_enabled" default="false"/>
+  <arg name="r6_realsense_enabled" default="false"/>
+  <arg name="r6_initX" value="-88" />
+  <arg name="r6_initY" value="-3" />
+  <arg name="r6_initYaw" value="0" />
+  <arg name="r6_scanTopic" value="scan" />
+  <arg name="r6_baseFrame" value="$(arg r6_tfpre)/base_link" />
+  <arg name="r6_odomFrame" value="$(arg r6_tfpre)/odom" />
+
+  <group ns="$(arg r6_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r6_namespace)" />
+      <arg name="tfpre" value="$(arg r6_tfpre)" />
+      <arg name="robot_name"  value="$(arg r6_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r6_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r6_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r6_realsense_enabled)" />
+      <arg name="initX" value="$(arg r6_initX)" />
+      <arg name="initY" value="$(arg r6_initY)" />
+      <arg name="initYaw" value="$(arg r6_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r6_namespace)" />
+      <arg name="tfpre" value="$(arg r6_tfpre)" />
+      <arg name="scan_topic" value="$(arg r6_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r6_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r6_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r6_initX)" />
+      <arg name="initial_pose_y" value="$(arg r6_initY)" />
+      <arg name="initial_pose_a" value="$(arg r6_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r6_namespace)" />
+      <arg name="tfpre" value="$(arg r6_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r6_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r6_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r6_scanTopic)" />
+    </include>
+  </group>
+  
+  <!-- ..............................  ROBOT7  ..................................... -->
+  <arg name="r7_namespace" value="hsk07" />
+  <arg name="r7_tfpre" value="$(arg r7_namespace)_tf" />
+  <arg name="r7_robot_name"  value="husky_$(arg r7_namespace)" />
+  <arg name="r7_laser_enabled" default="true"/>
+  <arg name="r7_kinect_enabled" default="false"/>
+  <arg name="r7_realsense_enabled" default="false"/>
+  <arg name="r7_initX" value="-88" />
+  <arg name="r7_initY" value="3" />
+  <arg name="r7_initYaw" value="0" />
+  <arg name="r7_scanTopic" value="scan" />
+  <arg name="r7_baseFrame" value="$(arg r7_tfpre)/base_link" />
+  <arg name="r7_odomFrame" value="$(arg r7_tfpre)/odom" />
+
+  <group ns="$(arg r7_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r7_namespace)" />
+      <arg name="tfpre" value="$(arg r7_tfpre)" />
+      <arg name="robot_name"  value="$(arg r7_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r7_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r7_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r7_realsense_enabled)" />
+      <arg name="initX" value="$(arg r7_initX)" />
+      <arg name="initY" value="$(arg r7_initY)" />
+      <arg name="initYaw" value="$(arg r7_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r7_namespace)" />
+      <arg name="tfpre" value="$(arg r7_tfpre)" />
+      <arg name="scan_topic" value="$(arg r7_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r7_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r7_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r7_initX)" />
+      <arg name="initial_pose_y" value="$(arg r7_initY)" />
+      <arg name="initial_pose_a" value="$(arg r7_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r7_namespace)" />
+      <arg name="tfpre" value="$(arg r7_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r7_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r7_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r7_scanTopic)" />
+    </include>
+  </group>
+  
+  <!-- ..............................  ROBOT8  ..................................... -->
+  <arg name="r8_namespace" value="hsk08" />
+  <arg name="r8_tfpre" value="$(arg r8_namespace)_tf" />
+  <arg name="r8_robot_name"  value="husky_$(arg r8_namespace)" />
+  <arg name="r8_laser_enabled" default="true"/>
+  <arg name="r8_kinect_enabled" default="false"/>
+  <arg name="r8_realsense_enabled" default="false"/>
+  <arg name="r8_initX" value="-88" />
+  <arg name="r8_initY" value="-4" />
+  <arg name="r8_initYaw" value="0" />
+  <arg name="r8_scanTopic" value="scan" />
+  <arg name="r8_baseFrame" value="$(arg r8_tfpre)/base_link" />
+  <arg name="r8_odomFrame" value="$(arg r8_tfpre)/odom" />
+
+  <group ns="$(arg r8_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r8_namespace)" />
+      <arg name="tfpre" value="$(arg r8_tfpre)" />
+      <arg name="robot_name"  value="$(arg r8_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r8_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r8_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r8_realsense_enabled)" />
+      <arg name="initX" value="$(arg r8_initX)" />
+      <arg name="initY" value="$(arg r8_initY)" />
+      <arg name="initYaw" value="$(arg r8_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r8_namespace)" />
+      <arg name="tfpre" value="$(arg r8_tfpre)" />
+      <arg name="scan_topic" value="$(arg r8_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r8_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r8_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r8_initX)" />
+      <arg name="initial_pose_y" value="$(arg r8_initY)" />
+      <arg name="initial_pose_a" value="$(arg r8_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r8_namespace)" />
+      <arg name="tfpre" value="$(arg r8_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r8_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r8_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r8_scanTopic)" />
+    </include>
+  </group>
+  
+  <!-- ..............................  ROBOT9  ..................................... -->
+  <arg name="r9_namespace" value="hsk09" />
+  <arg name="r9_tfpre" value="$(arg r9_namespace)_tf" />
+  <arg name="r9_robot_name"  value="husky_$(arg r9_namespace)" />
+  <arg name="r9_laser_enabled" default="true"/>
+  <arg name="r9_kinect_enabled" default="false"/>
+  <arg name="r9_realsense_enabled" default="false"/>
+  <arg name="r9_initX" value="-88" />
+  <arg name="r9_initY" value="4" />
+  <arg name="r9_initYaw" value="0" />
+  <arg name="r9_scanTopic" value="scan" />
+  <arg name="r9_baseFrame" value="$(arg r9_tfpre)/base_link" />
+  <arg name="r9_odomFrame" value="$(arg r9_tfpre)/odom" />
+
+  <group ns="$(arg r9_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r9_namespace)" />
+      <arg name="tfpre" value="$(arg r9_tfpre)" />
+      <arg name="robot_name"  value="$(arg r9_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r9_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r9_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r9_realsense_enabled)" />
+      <arg name="initX" value="$(arg r9_initX)" />
+      <arg name="initY" value="$(arg r9_initY)" />
+      <arg name="initYaw" value="$(arg r9_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r9_namespace)" />
+      <arg name="tfpre" value="$(arg r9_tfpre)" />
+      <arg name="scan_topic" value="$(arg r9_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r9_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r9_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r9_initX)" />
+      <arg name="initial_pose_y" value="$(arg r9_initY)" />
+      <arg name="initial_pose_a" value="$(arg r9_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r9_namespace)" />
+      <arg name="tfpre" value="$(arg r9_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r9_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r9_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r9_scanTopic)" />
+    </include>
+  </group>
+  
+  <!-- ..............................  ROBOT10  ..................................... -->
+  <arg name="r10_namespace" value="hsk010" />
+  <arg name="r10_tfpre" value="$(arg r10_namespace)_tf" />
+  <arg name="r10_robot_name"  value="husky_$(arg r10_namespace)" />
+  <arg name="r10_laser_enabled" default="true"/>
+  <arg name="r10_kinect_enabled" default="false"/>
+  <arg name="r10_realsense_enabled" default="false"/>
+  <arg name="r10_initX" value="-88" />
+  <arg name="r10_initY" value="-5" />
+  <arg name="r10_initYaw" value="0" />
+  <arg name="r10_scanTopic" value="scan" />
+  <arg name="r10_baseFrame" value="$(arg r10_tfpre)/base_link" />
+  <arg name="r10_odomFrame" value="$(arg r10_tfpre)/odom" />
+
+  <group ns="$(arg r10_namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg r10_namespace)" />
+      <arg name="tfpre" value="$(arg r10_tfpre)" />
+      <arg name="robot_name"  value="$(arg r10_robot_name)" />
+      <arg name="laser_enabled" value="$(arg r10_laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg r10_kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg r10_realsense_enabled)" />
+      <arg name="initX" value="$(arg r10_initX)" />
+      <arg name="initY" value="$(arg r10_initY)" />
+      <arg name="initYaw" value="$(arg r10_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg r10_namespace)" />
+      <arg name="tfpre" value="$(arg r10_tfpre)" />
+      <arg name="scan_topic" value="$(arg r10_scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg r10_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r10_baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg r10_initX)" />
+      <arg name="initial_pose_y" value="$(arg r10_initY)" />
+      <arg name="initial_pose_a" value="$(arg r10_initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" >
+      <arg name="namespace" value="$(arg r10_namespace)" />
+      <arg name="tfpre" value="$(arg r10_tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg r10_odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg r10_baseFrame)"/>
+      <arg name="laser_topic" value="$(arg r10_scanTopic)" />
+    </include>
+  </group>
+
+
+
+
+</launch>

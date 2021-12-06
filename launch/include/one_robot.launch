@@ -1,0 +1,55 @@
+<launch>
+  <arg name="namespace" default="hsk01" />
+  <arg name="tfpre" default="$(arg namespace)_tf" />
+  <arg name="robot_name"  default="husky_$(arg namespace)" />
+  <arg name="laser_enabled" default="true"/>
+  <arg name="kinect_enabled" default="false"/>
+  <arg name="realsense_enabled" default="false"/>
+  <arg name="initX" default="7.2" />
+  <arg name="initY" default="-2.2" />
+  <arg name="initYaw" default="0" />
+  <arg name="scanTopic" default="scan" />
+  <arg name="odomTopic" default="odom" />
+  <arg name="baseFrame" default="$(arg tfpre)/base_link" />
+  <arg name="odomFrame" default="$(arg tfpre)/odom" />
+
+<arg name="nav_package" default="move_base" doc="a string holding the name of the navigation package to use for generating cmd_vel. eg. move_base, sfm_mpdm"/>
+
+  <group ns="$(arg namespace)">
+    <include file="$(find musky_nav)/launch/include/husky.launch">
+      <arg name="namespace" value="$(arg namespace)" />
+      <arg name="tfpre" value="$(arg tfpre)" />
+      <arg name="robot_name"  value="$(arg robot_name)" />
+      <arg name="laser_enabled" value="$(arg laser_enabled)" />
+      <arg name="kinect_enabled" value="$(arg kinect_enabled)" />
+      <arg name="realsense_enabled" value="$(arg realsense_enabled)" />
+      <arg name="initX" value="$(arg initX)" />
+      <arg name="initY" value="$(arg initY)" />
+      <arg name="initYaw" value="$(arg initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/amcl_hsk.launch" >
+      <arg name="namespace" value="$(arg namespace)" />
+      <arg name="tfpre" value="$(arg tfpre)" />
+      <arg name="scan_topic" value="$(arg scanTopic)" />
+      <arg name="odom_frame_id"   value="$(arg odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg baseFrame)"/>
+      <arg name="initial_pose_x" value="$(arg initX)" />
+      <arg name="initial_pose_y" value="$(arg initY)" />
+      <arg name="initial_pose_a" value="$(arg initYaw)" />
+    </include>
+    <include file="$(find musky_nav)/launch/include/move_base_hsk.launch" if="$(eval nav_package == 'move_base')">
+      <arg name="namespace" value="$(arg namespace)" />
+      <arg name="tfpre" value="$(arg tfpre)" />
+      <arg name="odom_frame_id"   value="$(arg odomFrame)"/>
+      <arg name="base_frame_id"   value="$(arg baseFrame)"/>
+      <arg name="laser_topic" value="$(arg scanTopic)" />
+    </include>
+    <include file="$(find sfm_mpdm)/launch/sfm_mpdm_launch.launch" if="$(eval nav_package == 'sfm_mpdm')">
+      <arg name="robot_namespace" value="$(arg namespace)" />
+      <arg name="scan_topic" value="$(arg scanTopic)" />
+      <arg name="odom_topic" value="$(arg odomTopic)" />
+    </include>
+  </group>
+ 
+
+</launch>

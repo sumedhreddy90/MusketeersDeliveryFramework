@@ -4,9 +4,10 @@
   <arg name="headless" default="false" />
   <!-- <arg name="world_name" default="worlds/empty.world"/> -->
   <!-- <arg name="world_name" default="$(find musky_nav)/worlds/clearpath_playpen.world" /> -->
-  <arg name="world_name" default="$(find musky_nav)/worlds/ridgeback_race.world" />
+  <arg name="world_name" default="$(find musky_nav)/worlds/umd_map.world" />
   <!-- <arg name="world_name" default="$(find musky_nav)/worlds/willowgarage.world" /> -->
-  
+   
+  <!-- Launch Gazebo with the specified world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="debug" value="0" />
     <arg name="gui" value="$(arg gui)" />
@@ -16,32 +17,26 @@
     <arg name="paused" value="false"/>
   </include>
   
-<!--******************************-->
-<!-- Including the robots -->
-<!--******************************-->
-  <include file="$(find musky_nav)/launch/include/robots.launch" />
-  <!-- <include file="$(find musky_nav)/launch/include/one_robot.launch" /> -->
+<!-- Run the map server -->
+ <arg name="map_file" default="$(find musky_nav)/maps/my_ridgeback_race.yaml"/>
+ <!-- <arg name="map_file" default="$(find musky_nav)/maps/playpen_map.yaml"/> -->
+ <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" >
+ </node>
 
 <!--******************************-->
-<!-- launching rviz -->
+<!-- launching the robots along with their navigation related packages-->
 <!--******************************-->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find musky_nav)/rviz/robot.rviz" />
+  <include file="$(find musky_nav)/launch/include/robots.launch" />
+
+<!--    Launching Rviz   -->
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find musky_nav)/rviz/amcl_demo.rviz" />
 
 <!--******************************-->
 <!-- Debugging tools -->
 <!--******************************-->
-  <!-- <node name="rqt_console" pkg="rqt_console" type="rqt_console" output="screen" />
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find nre_simmultihusky)/rviz/duohusky.rviz" output="screen"/>
   <node name="rqt_topic" pkg="rqt_topic" type="rqt_topic" output="screen" />
   <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" output="screen" />
   <node name="rqt_tf_tree" pkg="rqt_tf_tree" type="rqt_tf_tree" output="screen" /> -->
   
 </launch>
-
-
-
-
-
-  
-
-
-
