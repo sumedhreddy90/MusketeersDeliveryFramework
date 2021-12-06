@@ -17,9 +17,6 @@ jobs:
         run: |
             ls -l $GITHUB_WORKSPACE
             sudo apt-get install -y frei0r-plugins-dev
-            sudo apt-get install ros-melodic-husky-simulator
-            sudo apt-get install ros-melodic-husky-desktop
-            sudo apt-get install ros-melodic-husky-navigation
 
       - name: Install ROS
         run: |
@@ -45,6 +42,11 @@ jobs:
           cd ~/catkin_ws
           rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
           rosdep install --from-paths src --ignore-src -r -y
+      - name: Install Husky Dependencies 
+        run: |
+           sudo apt-get install ros-noetic-husky-simulator
+           sudo apt-get install ros-noetic-husky-desktop
+           sudo apt-get install ros-neotic-husky-navigation
       - name: catkin build
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
