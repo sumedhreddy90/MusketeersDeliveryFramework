@@ -27,6 +27,23 @@ for short-range hauling(<5 Miles) using Multi Fleet GPS Waypoint Navigation.
 ### Sprint Planning 
 [![Doc Link](https://img.shields.io/badge/Doc-link-blue)](https://docs.google.com/document/d/1PARTqCdQkq0k0sgHWpRNl_M1ng2w7DdYFu71zwEIHzk/edit?usp=sharing)
 
+### Phase 2 Progress
+* Spawning Multiple huskies on UMD Map near Mckeldin Library
+* Creating a UMD world and Integrating with project 
+  - Download UMD campus map from Open Street maps
+  - OSM extractor to convert 3D OSM map to OBJ format
+  - Convert OBJ to STL file conversion
+  - Feed custom map to Gazebo
+* Working on GPS Way point navigation for Multiple Huskies
+* Creating Stub Classes and Test cases stubs
+* Integrating Github Actions for CI and coverage
+
+### Screenshots of our Output
+[Gazebo: Spawning Fleet of Huskies in temporary Dock Station]file:///home/starfleeet-robotics/Pictures/Gazebo.png![image](https://user-images.githubusercontent.com/24978535/144908953-9a8ab76a-c516-43da-9176-961469c7d72a.png)
+
+[Rviz: Spawning Fleet of Huskies in temporary Dock Station]file:///home/starfleeet-robotics/Pictures/RViz.png![image](https://user-images.githubusercontent.com/24978535/144908977-e60ed050-e89e-47d9-bfc4-a8884cad6ed5.png)
+
+[UMD Campus Map Mckeldin Library]file:///home/starfleeet-robotics/Pictures/UMD.png![image](https://user-images.githubusercontent.com/24978535/144909022-c8d16ee7-5cba-4e44-b92f-40f51a340c25.png)
 
 ## Assumptions
 * The streets do not have any
