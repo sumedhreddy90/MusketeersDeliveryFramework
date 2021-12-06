@@ -55,4 +55,5 @@ jobs:
       - name: lint
         run: |
           cd ~/catkin_ws
-          catkin_make
+          catkin build frei0r_image --no-deps --catkin-make-args roslint
+
