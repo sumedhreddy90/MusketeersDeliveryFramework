@@ -46,7 +46,6 @@ jobs:
         run: |
            sudo apt-get install ros-noetic-husky-simulator
            sudo apt-get install ros-noetic-husky-desktop
-           sudo apt-get install ros-neotic-husky-navigation
       - name: catkin build
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
