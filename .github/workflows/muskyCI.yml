@@ -17,6 +17,10 @@ jobs:
         run: |
             ls -l $GITHUB_WORKSPACE
             sudo apt-get install -y frei0r-plugins-dev
+            sudo apt-get install ros-noetic-husky-simulator
+            sudo apt-get install ros-noetic-husky-desktop
+            sudo apt-get install ros-noetic-husky-navigation
+
       - name: Install ROS
         run: |
             sudo sh -c "echo \"deb http://packages.ros.org/ros/ubuntu $ROS_CI_DESKTOP main\" > /etc/apt/sources.list.d/ros-latest.list"
@@ -37,7 +41,7 @@ jobs:
           sudo rosdep init
           rosdep update
           mkdir -p ~/catkin_ws/src
-          ln -s $GITHUB_WORKSPACE ~/catkin_ws/src/frei0r_image
+          ln -s $GITHUB_WORKSPACE ~/catkin_ws/src/
           cd ~/catkin_ws
           rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
           rosdep install --from-paths src --ignore-src -r -y
@@ -50,4 +54,4 @@ jobs:
       - name: lint
         run: |
           cd ~/catkin_ws
-          catkin build frei0r_image --no-deps --catkin-make-args roslint
+          catkin_make
