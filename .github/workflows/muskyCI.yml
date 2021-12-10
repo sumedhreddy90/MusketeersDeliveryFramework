@@ -1,4 +1,4 @@
-name: Noetic Ubuntu 20.04
+name: Noetic MusketeersDelivery
 
 on:
   push:
@@ -12,48 +12,69 @@ jobs:
       ROS_CI_DESKTOP: "`lsb_release -cs`"  # e.g. [trusty|xenial|...]
       ROS_DISTRO: noetic
     steps:
-      - uses: actions/checkout@v2
-      - name: Install Non-ROS Dependencies
+      - name: MusketeersDeliveryFramework
+        uses: actions/checkout@v2
+        with:
+          path: catkin_ws/src/MusketeersDeliveryFramework
+      - name: Configure ROS for install
         run: |
-            ls -l $GITHUB_WORKSPACE
-            sudo apt-get install -y frei0r-plugins-dev
-
-      - name: Install ROS
+          sudo sh -c "echo \"deb http://packages.ros.org/ros/ubuntu $ROS_CI_DESKTOP main\" > /etc/apt/sources.list.d/ros-latest.list"
+          sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+          sudo apt-get update -qq
+          # sudo apt-get install dpkg
+          # sudo apt-get install -y gfortran
+          # sudo apt-get install -y libatlas-base-dev
+          # sudo apt-get install -y libblas-dev
+          # sudo apt-get install -y libboost-dev
+          # sudo apt-get install -y libboost-signals-dev
+          # sudo apt-get install -y libbullet-dev
+          # sudo apt-get install -y libceres-dev
+          # sudo apt-get install -y libeigen3-dev
+          # sudo apt-get install -y liblapack-dev
+          # sudo apt-get install -y libpng++-dev
+          # sudo apt-get install -y libsdl2-dev
+          # sudo apt-get install -y libv4l-dev
+          # sudo apt-get install -y libyaml-cpp-dev
+          # sudo apt-get install -y qt5-default
+      - name: Install ROS base packages
         run: |
-            sudo sh -c "echo \"deb http://packages.ros.org/ros/ubuntu $ROS_CI_DESKTOP main\" > /etc/apt/sources.list.d/ros-latest.list"
-            sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-            sudo apt-get update -qq
-            sudo apt-get install dpkg
-            sudo apt-get install -y python3-catkin-pkg
-            sudo apt-get install -y python3-catkin-tools
-            sudo apt-get install -y python3-osrf-pycommon
-            sudo apt-get install -y python3-rosdep
-            sudo apt-get install -y python3-wstool
-            sudo apt-get install -y ros-cmake-modules
-            sudo apt-get install -y ros-$ROS_DISTRO-catkin
-            source /opt/ros/$ROS_DISTRO/setup.bash
+          sudo apt-get install -y python3-catkin-pkg
+          sudo apt-get install -y python3-catkin-tools
+          sudo apt-get install -y python3-rosdep
+          sudo apt-get install -y python3-wstool
+          sudo apt-get install -y python3-osrf-pycommon
+          sudo apt-get install -y ros-cmake-modules
+          sudo apt-get install -y ros-$ROS_DISTRO-catkin  # provides setup.bash
       - name: Install ROS packages with rosdep
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
           sudo rosdep init
           rosdep update
           mkdir -p ~/catkin_ws/src
-          ln -s $GITHUB_WORKSPACE ~/catkin_ws/src/MusketeersDeliveryFramework
-          cd ~/catkin_ws
+          cd ~/catkin_ws/src
+          ln -s ~/work  # $CI_SOURCE_PATH
+          cd ..
           rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
           rosdep install --from-paths src --ignore-src -r -y
-      - name: Install Husky Dependencies 
-        run: |
-           sudo apt-get install ros-noetic-husky-simulator
-           sudo apt-get install ros-noetic-husky-desktop
-      - name: catkin build
+      - name: Build Release
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
           cd ~/catkin_ws
+          # echo "::warning $CI_SOURCE_PATH"
+          # echo "::warning `ls -l`"
+          catkin config --install --cmake-args -DCMAKE_BUILD_TYPE=Release
           catkin build --no-status
           source devel/setup.bash
       - name: lint
         run: |
           cd ~/catkin_ws
-          catkin build MusketeersDeliveryFramework --no-deps --catkin-make-args roslint
-
+          # nothing uses linting here so this fails:
+          # "Error: With --no-deps, you must specify packages to build."
+          # catkin build $(catkin list --depends-on roslint -u) --no-deps --catkin-make-args roslint
+          #
+      - name: Tests
+        run: |
+          cd ~/catkin_ws
+          # nothing uses linting here so this fails:
+          # "Error: With --no-deps, you must specify packages to build."
+          catkin run_tests
