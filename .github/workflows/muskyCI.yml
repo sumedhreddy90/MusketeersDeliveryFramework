@@ -1,4 +1,4 @@
-name: Noetic MusketeersDelivery
+name: MusketeersDelivery Build and Test
 
 on:
   push:
