@@ -12,8 +12,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  tf
-  message_generation
   tf2
   nav_msgs
   sensor_msgs
@@ -84,7 +82,7 @@ generate_messages(
   move_base_msgs
   geometry_msgs
 )
-
+add_subdirectory(CLI11)
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
 ################################################
@@ -241,7 +239,6 @@ if(CATKIN_ENABLE_TESTING)
   add_dependencies(
     musk_init
     musketeersTests
-    ${PROJECT_NAME}_generate_messages_cpp
     ${catkin_EXPORTED_TARGETS}
     )
   
