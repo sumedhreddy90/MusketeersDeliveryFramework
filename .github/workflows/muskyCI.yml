@@ -81,8 +81,16 @@ jobs:
           cd ~/catkin_ws
           # nothing uses linting here so this fails:
           # "Error: With --no-deps, you must specify packages to build."
-          catkin run_tests
-      - name: Publish to coveralls.io
+          catkin run_tests -i && catkin_test_results
+          
+      - name: Configure Codecov
+        run: |
+          lcov --directory . --capture --output-file coverage.info
+          lcov --remove coverage.info '/opt/*' '/usr/*' '*/devel/*' '*_test*' --output-file coverage.info
+          lcov --list coverage.info
+      
+      - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: catkin_ws/src/coverage.info
