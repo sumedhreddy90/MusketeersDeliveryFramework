@@ -1,0 +1,5 @@
+<launch>
+    <node pkg = "musky_nav" type = "musk_init" name = "musk_init" output = "screen"/>
+    <test pkg = "musky_nav" test-name = "musketeersTests" type = "musketeersTests" />
+</launch>
+
