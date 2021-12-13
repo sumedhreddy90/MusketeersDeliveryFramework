@@ -20,8 +20,7 @@ This repository contains a multi-robot autonomous delivery framework, that works
 ### UML
 [Quad Chart](https://drive.google.com/file/d/112d7ZOfGakJW6sQtDZE99uixeMIY7aPG/view?usp=sharing) \
 [Project Proposal](https://drive.google.com/file/d/1M1FodIeb_yLv4JwdbofX3ztwyTm6bGPM/view?usp=sharing) \
-[Activity Diagram](https://drive.google.com/file/d/1Tu6yAAuHe9edw5sUqZ6b6rdyhWe9690b/view?usp=sharing) \
-[Class Diagram](https://drive.google.com/file/d/1F0wCk2moPsRFCpEKdf5eaZrsnagD0Mt8/view?usp=sharing)
+
 
 
 ### AIP Document 
