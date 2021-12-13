@@ -23,6 +23,7 @@
 #include <ros/ros.h>
 #include "MuskyNavGoal.hpp"
 
+
 /**
  * @brief      This tests the object instantiation for the MuskyNavGoal Class
  * @param          muskNavTest gtest framework
@@ -30,9 +31,10 @@
  * @return     none
  */
 TEST(muskNavTest, muskNavTest) {
-  // Object of type Navigation created
   ros::NodeHandle nh;
   int musky_id=1;
+  // Object of type Navigation created
+  MuskyNavGoal musky(nh,musky_id);
   EXPECT_NO_FATAL_FAILURE(MuskyNavGoal musky(nh,musky_id));
 }
 
@@ -53,7 +55,7 @@ TEST(VelocityPubTest , CommandVelTest) {
   ros::spinOnce();
 
   // Expect the collision flag to be false
-  EXPECT_EQ(pub.getNumSubscribers(), 1);
+  EXPECT_EQ(pub.getNumSubscribers(), 0);
 }
 
 /**
@@ -63,10 +65,11 @@ TEST(VelocityPubTest , CommandVelTest) {
  * @return     none
  */
 TEST(ConcatMuskTest, concatTest) {
-  // Object of type MuskyNavGoal is being instantiated
   ros::NodeHandle nh;
-  int musky_id=2;
+  int musky_id=1;
+  // Object of type Navigation created
   MuskyNavGoal musky(nh,musky_id);
+  // Object of type MuskyNavGoal is being instantiated
   EXPECT_EQ(musky.concatMuskyId(2), "/hsk02/move_base");
 }
 
