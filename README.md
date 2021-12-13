@@ -41,7 +41,7 @@ This repository contains a multi-robot autonomous delivery framework, that works
 * Created and released the package for the fleet system
 
 ### Presentaion Links 
-[Presentation PPT](https://www.canva.com/design/DAEycFWAvYQ/-p2MMooo0VO31sZ1018zVw/edit) \
+[Presentation PPT](https://drive.google.com/file/d/1DYCjtVKh_N355wW-lCqWUxPlOrV-pOAf/view?usp=sharing) \
 [Presentation Demo](https://youtu.be/GT90a_htJZU) 
 ### Demo Video links
 [Demo Musky Single Robot](https://youtu.be/gXPuU7SFJIQ) \
