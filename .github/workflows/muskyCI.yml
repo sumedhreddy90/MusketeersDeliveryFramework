@@ -60,7 +60,6 @@ jobs:
           sudo apt-get install -y ros-noetic-common-msgs
           sudo apt-get install -y ros-noetic-navigation
           sudo apt-get install -y ros-geometry-msgs
-          
       - name: Build Release
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
