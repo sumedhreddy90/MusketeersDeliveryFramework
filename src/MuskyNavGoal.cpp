@@ -1,7 +1,7 @@
 /*
  * 
  * @author Sumedh Koppula, Pratik Acharya, Rahul Karanam
- * @date 12th December 2021
+ * @date 06th December 2021
  * @copyright Copyright [2021] [Sumedh Koppula, Pratik Acharya, Rahul Karanam]
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,18 +15,24 @@
  * limitations under the License.'
  * 
  * 
- * @file main.cpp
- * @brief This files will run all the test cases i.e unit tests and rostests.
+ * @file MuskyNavGoal.cpp
+ * @brief This files defines the MuskNavGoal Class method.
  * 
+ * @section DESCRIPTION
  * 
- * 
- *  
+ * Source file for Naviagting muksy robots to different goal positions in the predefined map.
+ * First, the user selects the musky_robot using musky_id and chooses the goal location from 
+ * the predefined set of goal poses.The musky will then be navigated using the move_base commands
+ * provided using this class.
  */
-#include <gtest/gtest.h>
-#include <ros/ros.h>
 
-int main(int argc, char** argv) {
-  ros::init(argc, argv, "musketeersTests");
-  testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
+#include "MuskyNavGoal.hpp"
+
+
+MuskyNavGoal::MuskyNavGoal(ros::NodeHandle node , int musky_id) {}
+
+MuskyNavGoal::~MuskyNavGoal() {}
+
+std::string MuskyNavGoal::concatMuskyId(int musky_id) {}
+
+void MuskyNavGoal::muskySendGoal(int musky_id) {}
