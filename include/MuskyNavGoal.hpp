@@ -29,7 +29,7 @@
 //ROS Header Files
 #include <ros/ros.h>
 #include <iostream>
-#include </home/starfleeet-robotics/Desktop/umd_musky_ws/src/musk_nav_fuck/CLI/CLI.hpp>
+#include <../CLI11/include/CLI/CLI.hpp>
 #include <fstream>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
