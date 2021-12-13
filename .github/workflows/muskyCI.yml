@@ -57,9 +57,10 @@ jobs:
           rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
           rosdep install --from-paths src --ignore-src -r -y
           sudo apt-get install ros-noetic-tf2
-          sudo apt-get install -y ros-move-base-msgs
           sudo apt-get install -y ros-geometry-msgs
-          sudo apt-get install ros-noetic-common-msgs
+          sudo apt-get install -y ros-noetic-common-msgs
+          sudo apt-get install -y ros-noetic-navigation
+
       - name: Build Release
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
