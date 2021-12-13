@@ -2,7 +2,7 @@
 <package format="2">
   <name>musky_nav</name>
   <version>0.0.0</version>
-  <description>The musk_nav_fuck package</description>
+  <description>The musk_nav package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
@@ -13,13 +13,13 @@
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>Apache-2.0</license>
 
 
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/musk_nav_fuck</url> -->
+  <!-- <url type="website">http://wiki.ros.org/musk_nav</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
