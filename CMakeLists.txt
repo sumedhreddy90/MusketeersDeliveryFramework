@@ -116,7 +116,6 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES musk_nav_fuck
 #  CATKIN_DEPENDS actionlib roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -138,7 +137,6 @@ LINK_DIRECTORIES(/usr/local/lib)
  
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/musk_nav_fuck.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -216,11 +214,6 @@ target_link_libraries(musk_init ${catkin_LIBRARIES})
 ## Testing ##
 #############
 
-## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_musk_nav_fuck.cpp)
-# if(TARGET ${PROJECT_NAME}-test)
-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
-# endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
@@ -233,6 +226,7 @@ if(CATKIN_ENABLE_TESTING)
   test/ros_test.launch
   test/main.cpp
   test/muskNavTest.cpp
+  src/MuskyNavGoal.cpp
   )
   target_link_libraries(
   musketeersTests
