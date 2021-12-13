@@ -87,12 +87,13 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
   while(!ac.waitForServer(ros::Duration(5.0))){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
+  // cmdline options to interact with the commands
   char choice_to_continue = 'Y';
 
 
   while(status) {
 
-    // Ask the user where he wants the robot to go?
+    // Get the input from the user for where the Musky to go?
     std::cout << "\nWhere do you want the robot to go?" << std::endl;
     std::cout << "\n1 = Musketeers_Base-Station : 1 " << std::endl;
     std::cout << "2 = Musketeers_Base-Station : 2" << std::endl;
@@ -118,9 +119,8 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
 
     bool valid_selection = true;
 
-    // Use map_server to load the map of the environment on the /map topic.
-    // Launch RViz and click the Publish Point button in RViz to
-    // display the coordinates to the /clicked_point topic.
+    // Now the user will select the location based upon the input.
+    // We have predefined locations for the goal locations
     switch (location) {
       case 1:
         std::cout << "\n Base Location: Musketeers_Base-Station : 1\n" << std::endl;
@@ -147,6 +147,8 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         goal.target_pose.pose.position.x = -11.5;
         goal.target_pose.pose.position.y = 10;
         my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        // Converting the goal pose from RPY to quaternion using the 
+        // my_quat_from_euler.
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
