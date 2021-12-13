@@ -1,85 +1,61 @@
-name: Noetic MusketeersDelivery
+---
+name: Build & Test
 
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
+on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-    env:
-      ROS_CI_DESKTOP: "`lsb_release -cs`"  # e.g. [trusty|xenial|...]
-      ROS_DISTRO: noetic
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        container:
+          - image: 'ros:noetic'
+            env:
+              PYTHON_VERSION:
+              ROS_DISTRO: noetic
+
+    container: ${{ matrix.container }}
+
+    defaults:
+      run:
+        shell: bash
+
     steps:
-      - name: MusketeersDeliveryFramework
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
-          path: catkin_ws/src/MusketeersDeliveryFramework
-      - name: Configure ROS for install
+          path: src/${{ github.workspace }}
+
+      - name: Remove broken apt repos [Ubuntu]
         run: |
-          sudo sh -c "echo \"deb http://packages.ros.org/ros/ubuntu $ROS_CI_DESKTOP main\" > /etc/apt/sources.list.d/ros-latest.list"
-          sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-          sudo apt-get update -qq
-          # sudo apt-get install dpkg
-          # sudo apt-get install -y gfortran
-          # sudo apt-get install -y libatlas-base-dev
-          # sudo apt-get install -y libblas-dev
-          # sudo apt-get install -y libboost-dev
-          # sudo apt-get install -y libboost-signals-dev
-          # sudo apt-get install -y libbullet-dev
-          # sudo apt-get install -y libceres-dev
-          # sudo apt-get install -y libeigen3-dev
-          # sudo apt-get install -y liblapack-dev
-          # sudo apt-get install -y libpng++-dev
-          # sudo apt-get install -y libsdl2-dev
-          # sudo apt-get install -y libv4l-dev
-          # sudo apt-get install -y libyaml-cpp-dev
-          # sudo apt-get install -y qt5-default
-      - name: Install ROS base packages
+          for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
+      - name: Install ROS package dependencies
         run: |
-          sudo apt-get install -y python3-catkin-pkg
-          sudo apt-get install -y python3-catkin-tools
-          sudo apt-get install -y python3-rosdep
-          sudo apt-get install -y python3-wstool
-          sudo apt-get install -y python3-osrf-pycommon
-          sudo apt-get install -y ros-cmake-modules
-          sudo apt-get install -y ros-$ROS_DISTRO-catkin  # provides setup.bash
-      - name: Install ROS packages with rosdep
+          sudo apt update
+          sudo apt install -y git
+          sudo apt install -y python$PYTHON_VERSION-pip
+          sudo apt install -y python3-pip
+          sudo apt install -y python$PYTHON_VERSION-osrf-pycommon
+          sudo apt install -y python$PYTHON_VERSION-catkin-tools
+          python$PYTHON_VERSION -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip
+      - name: Create workspace
         run: |
-          source /opt/ros/$ROS_DISTRO/setup.bash
-          sudo rosdep init
-          rosdep update
-          mkdir -p ~/catkin_ws/src
-          cd ~/catkin_ws/src
-          ln -s ~/work  # $CI_SOURCE_PATH
+          cd src
+          wstool init
           cd ..
-          rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
-          rosdep install --from-paths src --ignore-src -r -y
-          sudo apt-get install ros-noetic-tf2
-          sudo apt-get install -y ros-noetic-common-msgs
-          sudo apt-get install -y ros-noetic-navigation
-          sudo apt-get install -y ros-geometry-msgs
-      - name: Build Release
+          rosdep update
+          rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+          
+      - name: Build workspace
+        if: contains(matrix.container.image, 'melodic') || contains(matrix.container.image, 'noetic')
         run: |
-          source /opt/ros/$ROS_DISTRO/setup.bash
-          cd ~/catkin_ws
-          # echo "::warning $CI_SOURCE_PATH"
-          # echo "::warning `ls -l`"
-          catkin config --install --cmake-args -DCMAKE_BUILD_TYPE=Release
-          catkin build --no-status
-          source devel/setup.bash
-      - name: lint
-        run: |
-          cd ~/catkin_ws
-          # nothing uses linting here so this fails:
-          # "Error: With --no-deps, you must specify packages to build."
-          # catkin build $(catkin list --depends-on roslint -u) --no-deps --catkin-make-args roslint
-          #
+          . /opt/ros/$ROS_DISTRO/setup.bash
+          catkin build
       - name: Unit tests
         run: |
           sudo apt install -y lcov
-          cd ~/catkin_ws
           . /opt/ros/$ROS_DISTRO/setup.bash
           catkin config --cmake-args -DCMAKE_CXX_FLAGS="-Wall -Wno-unused --coverage -fno-inline -fno-inline-small-functions -fno-default-inline" -DCMAKE_C_FLAGS="-Wall -Wno-unused --coverage -fno-inline -fno-inline-small-functions -fno-default-inline" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXE_LINKER_FLAGS="-lgcov"
           catkin build
@@ -94,4 +70,4 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: catkin_ws/src/coverage.info
+          path-to-lcov: ${{ github.workspace }}/coverage.info
