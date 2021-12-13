@@ -1,0 +1,98 @@
+DisplayScreen:
+
+
+
+<DisplayScreen>:
+
+    MDGridLayout:
+        cols: 2
+        size: root.width, root.height
+        
+
+        MDGridLayout:
+            cols: 2 
+            MDLabel:
+                text: "Base Station"
+                bold: "true"
+                halign: "center"
+            
+            MDDropDownItem:
+                id: base_item
+                text: 'Select Base' 
+                on_release: app.menu.open()
+
+          
+           
+            MDLabel:
+                text: "Robot- Musky"
+                bold: "true"
+                halign: "center"
+            
+    
+            MDDropDownItem:
+                id: robot_item
+                pos_hint: {'center_x': 0, 'center_y': 0}
+                text: 'Select Robot'
+                on_release: app.robot_menu.open()
+            
+            MDLabel:
+                text: "Delivery type"
+                bold: "true"
+                halign: "center"
+    
+            MDDropDownItem:
+                id: delivery_item
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                text: 'Delivery Type'
+                on_release: app.delivery_menu.open()
+
+            MDLabel:
+                text: "Available Location"
+                bold: "true"
+                halign: "center"
+    
+            MDDropDownItem:
+                id: location_item
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                text: 'Select Location'
+                background_color: 1, 1, 1, 1
+                on_release: app.location_menu.open()
+                
+            
+            Button:
+                id: btn_start
+                text: "Start Mission"
+                background_color: 0, 128, 0, 0.5
+                on_press: app.start_mission(*args)
+
+            Button:
+                id: btn_end
+                text: "Terminate Mission"   
+                background_color: 255, 0, 0, 0.5         
+
+        MDGridLayout:
+            cols: 1
+            
+            MDGridLayout:
+                cols: 1
+
+                BoxLayout:
+                    size_hint_y: None
+                    height: dp(250)
+                    orientation: 'vertical'
+        
+                    FitImage:
+                        size_hint_y: 3
+                        source: '/home/starfleeet-robotics/808x/src/MusketeersDeliveryFramework/src/GUI/del.png' 
+            
+                MDLabel:
+                    id: console_id
+                    bold: "true"
+                    halign: "center"
+                
+                MDLabel:
+                    
+                    text: ""
+                    bold: "true"
+                    halign: "center"
+            

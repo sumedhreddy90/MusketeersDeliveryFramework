@@ -167,6 +167,12 @@ Select one of the above mentioned options and the robot will plan the trajectory
 
 The bases are configured to cater to only the closes restaurants, hence, selection of the pickup location can be done as follows
 
+![](https://user-images.githubusercontent.com/24701030/145853502-14e9387f-e29f-46b6-a16c-5e1e00173fd2.png)
 
+The robots can also be controlled via a GUI that we created as follows
+
+```
+rosrun musky_nav musketeers_gui.py
+```
 
 
