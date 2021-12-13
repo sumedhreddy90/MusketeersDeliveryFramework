@@ -71,7 +71,7 @@ not contain extreme slopes.
 
 *Continuous Integration*: Travis CI, Coverall
 
-*Other*: ROS, Gazebo, RViz, Clearpath Husky
+*Other*: ROS, Gazebo, RViz, Clearpath Husky, Kivy(For GUI)
 
 ## Algorithms
 
