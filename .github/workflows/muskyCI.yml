@@ -56,6 +56,10 @@ jobs:
           cd ..
           rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
           rosdep install --from-paths src --ignore-src -r -y
+          sudo apt-get install ros-noetic-tf2
+          sudo apt-get install -y ros-noetic-common-msgs
+          sudo apt-get install -y ros-noetic-navigation
+          sudo apt-get install -y ros-geometry-msgs
       - name: Build Release
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
@@ -78,3 +82,7 @@ jobs:
           # nothing uses linting here so this fails:
           # "Error: With --no-deps, you must specify packages to build."
           catkin run_tests
+      - name: Publish to coveralls.io
+        uses: coverallsapp/github-action@master
+        with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
