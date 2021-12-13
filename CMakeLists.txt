@@ -1,13 +1,25 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(musky_nav)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+
+#add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+  actionlib
+  roscpp
+  rospy
+  std_msgs
+  tf
+  message_generation
+  tf2
+  nav_msgs
+  sensor_msgs
+  move_base_msgs
+  geometry_msgs
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -63,11 +75,15 @@ find_package(catkin REQUIRED)
 #   Action2.action
 # )
 
-## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+# Generate added messages and services with any dependencies listed here
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  nav_msgs
+  sensor_msgs
+  move_base_msgs
+  geometry_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -100,8 +116,8 @@ find_package(catkin REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES musky_nav
-#  CATKIN_DEPENDS other_catkin_pkg
+#  LIBRARIES musk_nav_fuck
+#  CATKIN_DEPENDS actionlib roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -112,13 +128,17 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
-# ${catkin_INCLUDE_DIRS}
+  include
+  ${catkin_INCLUDE_DIRS}
 )
 
+
+INCLUDE_DIRECTORIES(/usr/local/lib)
+LINK_DIRECTORIES(/usr/local/lib)
+ 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/musky_nav.cpp
+#   src/${PROJECT_NAME}/musk_nav_fuck.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -129,8 +149,11 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/musky_nav_node.cpp)
+add_executable(musk_init src/main.cpp include/MuskyNavGoal.hpp src/MuskyNavGoal.cpp)
+#add_executable(waypoint src/wayp.cpp)
 
+target_link_libraries(musk_init ${catkin_LIBRARIES})
+# target_link_libraries(waypoint ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -145,6 +168,7 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
+#set_property(TARGET my_executable PROPERTY CXX_STANDARD 17)
 
 #############
 ## Install ##
@@ -193,10 +217,39 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_musky_nav.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_musk_nav_fuck.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+
+  add_rostest_gtest(
+  musketeersTests
+  test/ros_test.launch
+  test/main.cpp
+  test/muskNavTest.cpp
+  )
+  target_link_libraries(
+  musketeersTests
+  ${catkin_LIBRARIES}
+  )
+  add_dependencies(
+    musk_init
+    musketeersTests
+    ${catkin_EXPORTED_TARGETS}
+  )
+
+  add_dependencies(
+    musk_init
+    musketeersTests
+    ${PROJECT_NAME}_generate_messages_cpp
+    ${catkin_EXPORTED_TARGETS}
+    )
+  
+  
+endif()
