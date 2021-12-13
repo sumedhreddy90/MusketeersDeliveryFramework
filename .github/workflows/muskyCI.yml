@@ -82,7 +82,4 @@ jobs:
           # nothing uses linting here so this fails:
           # "Error: With --no-deps, you must specify packages to build."
           catkin run_tests
-      - name: Publish to coveralls.io
-        uses: coverallsapp/github-action@master
-        with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
+ 
