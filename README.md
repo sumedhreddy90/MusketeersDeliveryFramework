@@ -38,13 +38,24 @@ This repository contains a multi-robot autonomous delivery framework, that works
 * Created header and source files according to the stubs which passed the tests
 * Created a command line interface for controlling the fleet
 * Created a Graphical User Interface to communicate and control the robots
+* Created and released the package for the fleet system
 
-### Screenshots of our Output
-[Gazebo: Spawning Fleet of Huskies in temporary Dock Station]file:///home/starfleeet-robotics/Pictures/Gazebo.png![image](https://user-images.githubusercontent.com/24978535/144908953-9a8ab76a-c516-43da-9176-961469c7d72a.png)
 
-[Rviz: Spawning Fleet of Huskies in temporary Dock Station]file:///home/starfleeet-robotics/Pictures/RViz.png![image](https://user-images.githubusercontent.com/24978535/144908977-e60ed050-e89e-47d9-bfc4-a8884cad6ed5.png)
 
-[UMD Campus Map Mckeldin Library]file:///home/starfleeet-robotics/Pictures/UMD.png![image](https://user-images.githubusercontent.com/24978535/144909022-c8d16ee7-5cba-4e44-b92f-40f51a340c25.png)
+### Old World Files
+Gazebo: Spawning Fleet of Huskies in temporary Dock Station ![image](https://user-images.githubusercontent.com/24978535/144908953-9a8ab76a-c516-43da-9176-961469c7d72a.png)
+
+Rviz: Spawning Fleet of Huskies in temporary Dock Station ![image](https://user-images.githubusercontent.com/24978535/144908977-e60ed050-e89e-47d9-bfc4-a8884cad6ed5.png)
+
+UMD Campus Map Mckeldin Library ![image](https://user-images.githubusercontent.com/24978535/144909022-c8d16ee7-5cba-4e44-b92f-40f51a340c25.png)
+
+### New World File
+![WhatsApp Image 2021-12-13 at 1 38 50 PM](https://user-images.githubusercontent.com/24701030/145869779-927f3504-0829-4aa2-a879-3d29cdf2373f.jpeg)
+
+### Generated MAP for Localization
+![WhatsApp Image 2021-12-13 at 1 38 50 PM (1)](https://user-images.githubusercontent.com/24701030/145869826-e1cd3ff5-e092-478b-8c75-7b2f60e4a9a5.jpeg)
+![WhatsApp Image 2021-12-13 at 1 38 50 PM (2)](https://user-images.githubusercontent.com/24701030/145869830-365af42b-4755-4056-8bdf-7190cc029418.jpeg)
+
 
 ## Assumptions
 * The streets do not have any
@@ -61,23 +72,24 @@ not contain extreme slopes.
 ## Project tested on
 
 * Ubuntu 20.04 using Noetic 
-* Ubuntu 18.04 using Melodic
 
 ## Technologies
 *Programing language*: C++
 
 *Build system*: cmake
 
-*Testing Library*: Google Test, Google Mock
+*Testing Library*: Google Test
 
-*Continuous Integration*: Travis CI, Coverall
+*Continuous Integration*: GitHub Actions CI, Coverall
 
 *Other*: ROS, Gazebo, RViz, Clearpath Husky
+
+
 
 ## Algorithms
 
 - husky_navigation package, which uses gmapping, move_base and frontier_exploration [BSD-3-Clause License].
-- GPS Waypoint Navigation
+- CLI11 package for parsing command line input [BSD-3-Clause License].
 
 ## Risk and Mitigations
 
@@ -96,6 +108,9 @@ malfunction leading to erratic behavior.
 Mitigation: If such a condition occurs, the robot will be made
 to override the autonomous navigation signals and a human
 operator will manually control the robot.
+
+### Setbacks
+* Due to narrow pathways, the robots are unable to find paths as the cost map generated have high padding. This can be mitigated by using smaller robots or by generating different paths. 
 
 ## Running the code
 
@@ -169,10 +184,12 @@ The bases are configured to cater to only the closes restaurants, hence, selecti
 
 ![](https://user-images.githubusercontent.com/24701030/145853502-14e9387f-e29f-46b6-a16c-5e1e00173fd2.png)
 
-The robots can also be controlled via a GUI that we created as follows
+The robots can also be controlled via a GUI as follows
 
 ```
 rosrun musky_nav musketeers_gui.py
 ```
 
+#### GUI 
+![WhatsApp Image 2021-12-13 at 11 00 18 AM](https://user-images.githubusercontent.com/24701030/145869304-9392391b-51a4-4114-93a0-f74b49ca2876.jpeg)
 
