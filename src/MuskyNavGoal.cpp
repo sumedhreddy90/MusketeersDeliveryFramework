@@ -20,15 +20,16 @@
  *
  * @section DESCRIPTION
  *
- * Source file for Naviagting muksy robots to different goal positions in the predefined map.
- * First, the user selects the musky_robot using musky_id and chooses the goal location from
- * the predefined set of goal poses.The musky will then be navigated using the move_base commands
- * provided using this class.
+ * Source file for Naviagting muksy robots to different goal positions in the
+ * predefined map. First, the user selects the musky_robot using musky_id and
+ * chooses the goal location from the predefined set of goal poses.The musky
+ * will then be navigated using the move_base commands provided using this
+ * class.
  */
 #include "MuskyNavGoal.hpp"
 /**
  * @fn MuskyNavGoal::MuskyNavGoal(ros::NodeHandle node , int musky_id)
- * @brief This is our constructor for MuskyNavGoal Class. It initializes the 
+ * @brief This is our constructor for MuskyNavGoal Class. It initializes the
  *        velocity of the the husky by publishing to the /cmd_vel topic
  *        of the musky robot.
  *
@@ -36,20 +37,20 @@
  *        int musky_id    is the Robot id musky_id
  * @return None
  */
-MuskyNavGoal::MuskyNavGoal(ros::NodeHandle node , int musky_id) {
-    // Publishing the twist messages to the robot given by the musky_id
-    ros::Publisher velocityPublisher =
-    node.advertise<geometry_msgs::Twist>("/hsk0"+std::to_string(musky_id)+"/cmd_vel", 1000);
-    // Declare and initialize twist
-    geometry_msgs::Twist twist;
-    twist.linear.x = 0.0;
-    twist.linear.y = 0.0;
-    twist.linear.z = 0.0;
-    twist.angular.x = 0.0;
-    twist.angular.y = 0.0;
-    twist.angular.z = 0.0;
-    // publish the initialised twist
-    velocityPublisher.publish(twist);
+MuskyNavGoal::MuskyNavGoal(ros::NodeHandle node, int musky_id) {
+  // Publishing the twist messages to the robot given by the musky_id
+  ros::Publisher velocityPublisher = node.advertise<geometry_msgs::Twist>(
+      "/hsk0" + std::to_string(musky_id) + "/cmd_vel", 1000);
+  // Declare and initialize twist
+  geometry_msgs::Twist twist;
+  twist.linear.x = 0.0;
+  twist.linear.y = 0.0;
+  twist.linear.z = 0.0;
+  twist.angular.x = 0.0;
+  twist.angular.y = 0.0;
+  twist.angular.z = 0.0;
+  // publish the initialised twist
+  velocityPublisher.publish(twist);
 }
 /**
  * @fn MuskyNavGoal::~MuskyNavGoal()
@@ -61,38 +62,37 @@ MuskyNavGoal::MuskyNavGoal(ros::NodeHandle node , int musky_id) {
 MuskyNavGoal::~MuskyNavGoal() {}
 /**
  * @fn std::string MuskyNavGoal::concatMuskyId(int musky_id)
- * @brief This Function will concatenate the musky id with move_base 
+ * @brief This Function will concatenate the musky id with move_base
  *        message which will be later used in MoveBaseClient.
  * @param int musky_id    is the Robot id musky_id
  * @return bot <std::double> is the concatenated string
  */
 std::string MuskyNavGoal::concatMuskyId(int musky_id) {
-    // Concatenating inorder to call multiple musky robots.
-    std::string bot = "/hsk0"+std::to_string(musky_id)+"/move_base";
-    return bot;
+  // Concatenating inorder to call multiple musky robots.
+  std::string bot = "/hsk0" + std::to_string(musky_id) + "/move_base";
+  return bot;
 }
 /**
  * @fn void MuskyNavGoal::muskySendGoal(int musky_id)
  * @brief This Function will navigate the robot to the user
- *        selection.  
+ *        selection.
  *
  * @param int musky_id    is the Robot id musky_id
  * @return None
  */
 void MuskyNavGoal::muskySendGoal(int musky_id) {
-    // 
-    MoveBaseClient ac(concatMuskyId(musky_id), true);
+  //
+  MoveBaseClient ac(concatMuskyId(musky_id), true);
 
-    // Wait for the action server to come up so that we can begin processing goals.
-  while(!ac.waitForServer(ros::Duration(5.0))){
+  // Wait for the action server to come up so that we can begin processing
+  // goals.
+  while (!ac.waitForServer(ros::Duration(5.0))) {
     ROS_INFO("Waiting for the move_base action server to come up");
   }
   // cmdline options to interact with the commands
   char choice_to_continue = 'Y';
 
-
-  while(status) {
-
+  while (status) {
     // Get the input from the user for where the Musky to go?
     std::cout << "\nWhere do you want the robot to go?" << std::endl;
     std::cout << "\n1 = Musketeers_Base-Station : 1 " << std::endl;
@@ -123,22 +123,26 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
     // We have predefined locations for the goal locations
     switch (location) {
       case 1:
-        std::cout << "\n Base Location: Musketeers_Base-Station : 1\n" << std::endl;
+        std::cout << "\n Base Location: Musketeers_Base-Station : 1\n"
+                  << std::endl;
         goal.target_pose.pose.position.x = -17.5;
         goal.target_pose.pose.position.y = 21.5;
         break;
       case 2:
-        std::cout << "\n Base Location: Musketeers_Base-Station : 2\n" << std::endl;
+        std::cout << "\n Base Location: Musketeers_Base-Station : 2\n"
+                  << std::endl;
         goal.target_pose.pose.position.x = 5.5;
         goal.target_pose.pose.position.y = 21.5;
         break;
       case 3:
-        std::cout << "\n Base Location: Musketeers_Base-Station : 3\n" << std::endl;
+        std::cout << "\n Base Location: Musketeers_Base-Station : 3\n"
+                  << std::endl;
         goal.target_pose.pose.position.x = -17.5;
         goal.target_pose.pose.position.y = -3.5;
         break;
       case 4:
-        std::cout << "\n Base Location: Musketeers_Base-Station : 4\n" << std::endl;
+        std::cout << "\n Base Location: Musketeers_Base-Station : 4\n"
+                  << std::endl;
         goal.target_pose.pose.position.x = 5.5;
         goal.target_pose.pose.position.y = -5.5;
         break;
@@ -146,8 +150,8 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         std::cout << "\n Restaurant Location: Chipotle\n" << std::endl;
         goal.target_pose.pose.position.x = -11.5;
         goal.target_pose.pose.position.y = 10;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
-        // Converting the goal pose from RPY to quaternion using the 
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
+        // Converting the goal pose from RPY to quaternion using the
         // my_quat_from_euler.
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
@@ -158,7 +162,7 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         std::cout << "\n Restaurant Location: Sub-way\n" << std::endl;
         goal.target_pose.pose.position.x = 11.5;
         goal.target_pose.pose.position.y = 10;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
@@ -168,7 +172,7 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         std::cout << "\n Restaurant Location: Taco-bell\n" << std::endl;
         goal.target_pose.pose.position.x = -11.5;
         goal.target_pose.pose.position.y = -15;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
@@ -178,7 +182,7 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         std::cout << "\n Restaurant Location: Panda Express\n" << std::endl;
         goal.target_pose.pose.position.x = 11.5;
         goal.target_pose.pose.position.y = -15;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
@@ -186,9 +190,9 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         break;
       case 9:
         std::cout << "\n Goal Location: Iribe\n" << std::endl;
-        goal.target_pose.pose.position.x = -11.5; 
+        goal.target_pose.pose.position.x = -11.5;
         goal.target_pose.pose.position.y = 2.2;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
@@ -198,7 +202,7 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         std::cout << "\nGoal Location: Mckeldin Library\n" << std::endl;
         goal.target_pose.pose.position.x = 5;
         goal.target_pose.pose.position.y = 11.3;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
@@ -208,7 +212,7 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         std::cout << "\nGoal Location: J.M Patterson Hall\n" << std::endl;
         goal.target_pose.pose.position.x = -19.2;
         goal.target_pose.pose.position.y = -21;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
@@ -218,19 +222,21 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
         std::cout << "\nGoal Location: Domain\n" << std::endl;
         goal.target_pose.pose.position.x = 16;
         goal.target_pose.pose.position.y = -21;
-        my_quat_from_euler.setRPY(0.0,0.0,-3.14);
+        my_quat_from_euler.setRPY(0.0, 0.0, -3.14);
         goal.target_pose.pose.orientation.x = my_quat_from_euler.x();
         goal.target_pose.pose.orientation.y = my_quat_from_euler.y();
         goal.target_pose.pose.orientation.z = my_quat_from_euler.z();
         goal.target_pose.pose.orientation.w = my_quat_from_euler.w();
         break;
       default:
-        std::cout << "\nInvalid selection/location to send your musky Please try again.\n" << std::endl;
+        std::cout << "\nInvalid selection/location to send your musky Please "
+                     "try again.\n"
+                  << std::endl;
         valid_selection = false;
     }
 
     // Go back to beginning if the selection is invalid.
-    if(!valid_selection) {
+    if (!valid_selection) {
       continue;
     }
 
@@ -240,21 +246,22 @@ void MuskyNavGoal::muskySendGoal(int musky_id) {
     // Wait until the robot reaches the goal
     ac.waitForResult();
 
-    if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
+    if (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
       ROS_INFO("  Musky has arrived the restaurant. ");
     else
       ROS_INFO(" Sorry !! Musky couldn't deliver your order at this location");
 
     // Ask the user if he wants to continue giving goals
     do {
-      std::cout << "\n Do you want to deliver (Y) or pick-up (N) ? (Y/N)" << std::endl;
+      std::cout << "\n Do you want to deliver (Y) or pick-up (N) ? (Y/N)"
+                << std::endl;
       std::cin >> choice_to_continue;
-      choice_to_continue = tolower(choice_to_continue); // Changing to lower case
+      choice_to_continue =
+          tolower(choice_to_continue);  // Changing to lower case
     } while (choice_to_continue != 'n' && choice_to_continue != 'y');
     // If the order is pickup then we terminate this process
-    if(choice_to_continue =='n') {
-        status = false;
+    if (choice_to_continue == 'n') {
+      status = false;
     }
   }
 }
-
