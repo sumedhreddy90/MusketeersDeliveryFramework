@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmusketeers__gui_1_1_musketeers_app">
+<title>musketeers_gui.MusketeersApp Class Reference</title>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary></indexterm>
+Inheritance diagram for musketeers_gui.MusketeersApp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmusketeers__gui_1_1_musketeers_app__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for musketeers_gui.MusketeersApp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmusketeers__gui_1_1_musketeers_app__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classmusketeers__gui_1_1_musketeers_app_1a0d5ef0ae28ac017253bebc5225229b3c">__init__</link> (self, **kwargs)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classmusketeers__gui_1_1_musketeers_app_1a6cf050da05b88b89659b9a8ecef8dd2c">set_item</link> (self, text_item)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classmusketeers__gui_1_1_musketeers_app_1aa0e009c0b6c1e0255403977d15ef93e4">set_robot</link> (self, robotlist)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classmusketeers__gui_1_1_musketeers_app_1a5bd5bbee59cd01e383f871e9f87cee20">set_delivery</link> (self, delivery_type)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classmusketeers__gui_1_1_musketeers_app_1a1a44dd2dad2f466b7cdf953bd443db5a">set_location</link> (self, location_list)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classmusketeers__gui_1_1_musketeers_app_1a1d4d01e941e404a2ce90f203c1381a97">start_mission</link> (self, *args)</para>
+</listitem>
+            <listitem><para>def <link linkend="_classmusketeers__gui_1_1_musketeers_app_1a1a97f7c30a23eaf766767510d2d02e8a">build</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1adc4cb207917938b3e268a981756aacd9">screen</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1a72bcbaa1296415bc57fe3e9884b1e430">robot_var</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1ad79452d72d5558a4b98c51d93723c961">delivery_var</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1a1120b0ae37363f2fc1e5f9cf368f8986">base_var</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1a62e17233141ff0e64cbc4b18da4d013d">location_var</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1ac70c4784e0a6ec12cc882912eee90061">menu</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1a35c4f512049388fe550812f3951c1d9c">delivery_menu</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1a07d7bde03d100b725995715a2df5ed3f">robot_menu</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_musketeers_app_1a27d21a9e563824281cffc938303b0749">location_menu</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a0d5ef0ae28ac017253bebc5225229b3c"/>    <section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def musketeers_gui.MusketeersApp.__init__ ( self, ** kwargs)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a1a97f7c30a23eaf766767510d2d02e8a"/>    <section>
+    <title>build()</title>
+<indexterm><primary>build</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>build</secondary></indexterm>
+<para><computeroutput>def musketeers_gui.MusketeersApp.build ( self)</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a5bd5bbee59cd01e383f871e9f87cee20"/>    <section>
+    <title>set_delivery()</title>
+<indexterm><primary>set_delivery</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>set_delivery</secondary></indexterm>
+<para><computeroutput>def musketeers_gui.MusketeersApp.set_delivery ( self,  delivery_type)</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a6cf050da05b88b89659b9a8ecef8dd2c"/>    <section>
+    <title>set_item()</title>
+<indexterm><primary>set_item</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>set_item</secondary></indexterm>
+<para><computeroutput>def musketeers_gui.MusketeersApp.set_item ( self,  text_item)</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a1a44dd2dad2f466b7cdf953bd443db5a"/>    <section>
+    <title>set_location()</title>
+<indexterm><primary>set_location</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>set_location</secondary></indexterm>
+<para><computeroutput>def musketeers_gui.MusketeersApp.set_location ( self,  location_list)</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1aa0e009c0b6c1e0255403977d15ef93e4"/>    <section>
+    <title>set_robot()</title>
+<indexterm><primary>set_robot</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>set_robot</secondary></indexterm>
+<para><computeroutput>def musketeers_gui.MusketeersApp.set_robot ( self,  robotlist)</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a1d4d01e941e404a2ce90f203c1381a97"/>    <section>
+    <title>start_mission()</title>
+<indexterm><primary>start_mission</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>start_mission</secondary></indexterm>
+<para><computeroutput>def musketeers_gui.MusketeersApp.start_mission ( self, * args)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a1120b0ae37363f2fc1e5f9cf368f8986"/>    <section>
+    <title>base_var</title>
+<indexterm><primary>base_var</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>base_var</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.base_var</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a35c4f512049388fe550812f3951c1d9c"/>    <section>
+    <title>delivery_menu</title>
+<indexterm><primary>delivery_menu</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>delivery_menu</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.delivery_menu</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1ad79452d72d5558a4b98c51d93723c961"/>    <section>
+    <title>delivery_var</title>
+<indexterm><primary>delivery_var</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>delivery_var</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.delivery_var</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a27d21a9e563824281cffc938303b0749"/>    <section>
+    <title>location_menu</title>
+<indexterm><primary>location_menu</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>location_menu</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.location_menu</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a62e17233141ff0e64cbc4b18da4d013d"/>    <section>
+    <title>location_var</title>
+<indexterm><primary>location_var</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>location_var</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.location_var</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1ac70c4784e0a6ec12cc882912eee90061"/>    <section>
+    <title>menu</title>
+<indexterm><primary>menu</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>menu</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.menu</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a07d7bde03d100b725995715a2df5ed3f"/>    <section>
+    <title>robot_menu</title>
+<indexterm><primary>robot_menu</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>robot_menu</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.robot_menu</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1a72bcbaa1296415bc57fe3e9884b1e430"/>    <section>
+    <title>robot_var</title>
+<indexterm><primary>robot_var</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>robot_var</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.robot_var</computeroutput></para>    </section><anchor xml:id="_classmusketeers__gui_1_1_musketeers_app_1adc4cb207917938b3e268a981756aacd9"/>    <section>
+    <title>screen</title>
+<indexterm><primary>screen</primary><secondary>musketeers_gui.MusketeersApp</secondary></indexterm>
+<indexterm><primary>musketeers_gui.MusketeersApp</primary><secondary>screen</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MusketeersApp.screen</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/<link linkend="_musketeers__gui_8py">musketeers_gui.py</link></section>
+</section>

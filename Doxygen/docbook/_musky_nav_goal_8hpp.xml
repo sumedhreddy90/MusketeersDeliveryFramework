@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__musky_nav_goal_8hpp">
+<title>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp File Reference</title>
+<indexterm><primary>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp</primary></indexterm>
+<programlisting>#include &lt;actionlib/client/simple_action_client.h&gt;
+#include &lt;geometry_msgs/PointStamped.h&gt;
+#include &lt;math.h&gt;
+#include &lt;move_base_msgs/MoveBaseAction.h&gt;
+#include &lt;ros/ros.h&gt;
+#include &lt;tf2/LinearMath/Quaternion.h&gt;
+#include &lt;../CLI11/include/CLI/CLI.hpp&gt;
+#include &quot;geometry_msgs/Twist.h&quot;
+</programlisting>Include dependency graph for MuskyNavGoal.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_musky_nav_goal_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_musky_nav_goal_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_musky_nav_goal">MuskyNavGoal</link></para>
+
+<para>Class MuskNavGoal. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef actionlib::SimpleActionClient&lt; move_base_msgs::MoveBaseAction &gt; <link linkend="__musky_nav_goal_8hpp_1a21e20cc0b6656ae897b3cbb969b93241">MoveBaseClient</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="__musky_nav_goal_8hpp_1a21e20cc0b6656ae897b3cbb969b93241"/>    <section>
+    <title>MoveBaseClient</title>
+<indexterm><primary>MoveBaseClient</primary><secondary>MuskyNavGoal.hpp</secondary></indexterm>
+<indexterm><primary>MuskyNavGoal.hpp</primary><secondary>MoveBaseClient</secondary></indexterm>
+<para><computeroutput>typedef actionlib::SimpleActionClient&lt;move_base_msgs::MoveBaseAction&gt; <link linkend="__musky_nav_goal_8hpp_1a21e20cc0b6656ae897b3cbb969b93241">MoveBaseClient</link></computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_d44c64559bbebec7f509842c48db8b23">
+<title>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include Directory Reference</title>
+<indexterm><primary>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__musky_nav_goal_8hpp">MuskyNavGoal.hpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

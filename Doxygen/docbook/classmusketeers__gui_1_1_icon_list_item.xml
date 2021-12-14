@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmusketeers__gui_1_1_icon_list_item">
+<title>musketeers_gui.IconListItem Class Reference</title>
+<indexterm><primary>musketeers_gui.IconListItem</primary></indexterm>
+Inheritance diagram for musketeers_gui.IconListItem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmusketeers__gui_1_1_icon_list_item__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for musketeers_gui.IconListItem:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmusketeers__gui_1_1_icon_list_item__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmusketeers__gui_1_1_icon_list_item_1a56d79b5ae70130aad3fbd4b1ece576e6">icon</link> = StringProperty()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classmusketeers__gui_1_1_icon_list_item_1a56d79b5ae70130aad3fbd4b1ece576e6"/>    <section>
+    <title>icon</title>
+<indexterm><primary>icon</primary><secondary>musketeers_gui.IconListItem</secondary></indexterm>
+<indexterm><primary>musketeers_gui.IconListItem</primary><secondary>icon</secondary></indexterm>
+<para><computeroutput>musketeers_gui.IconListItem.icon = StringProperty()<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/<link linkend="_musketeers__gui_8py">musketeers_gui.py</link></section>
+</section>

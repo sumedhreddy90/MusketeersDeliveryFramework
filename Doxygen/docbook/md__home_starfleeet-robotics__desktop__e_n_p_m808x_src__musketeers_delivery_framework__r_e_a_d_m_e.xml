@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e">
+
+<para><link xlink:href="https://opensource.org/licenses/Apache-2.0"></link></para>
+
+<para></para>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md1">
+<title>Overview</title>
+
+<para>The rapid rise of e-commerce services in the last decade, and its forecast for the future, have proved that the need for delivery services will be increasing, which needs to be addressed by improving the delivery infrastructure. Developments in technology have now made it possible to provide an autonomous solution, which can revolutionize the industry by creating an autonomous delivery network that can accomplish this task without the need for human intervention. \ In this project, we propose a fleet of autonomous delivery robots, called Musky, that can provide transportation services for various kinds of small to medium-sized goods(&lt;10 lbs) for short-range hauling(&lt;5 Miles) using Multi Fleet GPS Waypoint Navigation.</para>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md2">
+<title>Repository</title>
+
+<para>This repository contains a multi-robot autonomous delivery framework, that works with husky robots from ClearPath robotics, in a simulation environment. The robots called &quot;Musky&quot; can be controlled via command line inputs, where they can be made to traverse to a preset location to pick up an order from a restaurant and will deliver it to a preset delivery location.</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md3">
+<title>UML</title>
+
+<para>[Quad Chart](<link xlink:href="https://drive.google.com/file/d/112d7ZOfGakJW6sQtDZE99uixeMIY7aPG/view?usp=sharing">https://drive.google.com/file/d/112d7ZOfGakJW6sQtDZE99uixeMIY7aPG/view?usp=sharing</link>) \ [Project Proposal](<link xlink:href="https://drive.google.com/file/d/1M1FodIeb_yLv4JwdbofX3ztwyTm6bGPM/view?usp=sharing">https://drive.google.com/file/d/1M1FodIeb_yLv4JwdbofX3ztwyTm6bGPM/view?usp=sharing</link>) \ [Activity Diagram](<link xlink:href="https://drive.google.com/file/d/1Tu6yAAuHe9edw5sUqZ6b6rdyhWe9690b/view?usp=sharing">https://drive.google.com/file/d/1Tu6yAAuHe9edw5sUqZ6b6rdyhWe9690b/view?usp=sharing</link>) \ [Class Diagram](<link xlink:href="https://drive.google.com/file/d/1F0wCk2moPsRFCpEKdf5eaZrsnagD0Mt8/view?usp=sharing">https://drive.google.com/file/d/1F0wCk2moPsRFCpEKdf5eaZrsnagD0Mt8/view?usp=sharing</link>)</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md4">
+<title>AIP Document</title>
+
+<para>[![Doc Link](<link xlink:href="https://img.shields.io/badge/Doc-link-blue">https://img.shields.io/badge/Doc-link-blue</link>)](<link xlink:href="https://docs.google.com/spreadsheets/d/1ULTNvGetic1YF69uuCX7t-CtU-yicrW0z6M5p8Y3zxk/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1ULTNvGetic1YF69uuCX7t-CtU-yicrW0z6M5p8Y3zxk/edit?usp=sharing</link>)</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md5">
+<title>Sprint Planning</title>
+
+<para>[![Doc Link](<link xlink:href="https://img.shields.io/badge/Doc-link-blue">https://img.shields.io/badge/Doc-link-blue</link>)](<link xlink:href="https://docs.google.com/document/d/1PARTqCdQkq0k0sgHWpRNl_M1ng2w7DdYFu71zwEIHzk/edit?usp=sharing">https://docs.google.com/document/d/1PARTqCdQkq0k0sgHWpRNl_M1ng2w7DdYFu71zwEIHzk/edit?usp=sharing</link>)</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md6">
+<title>Phase 3 Progress</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Generating a new world file, as localization is problematic in UMD world</para>
+</listitem><listitem>
+<para>Generated map for the above world using Gmapping and used the same for localization</para>
+</listitem><listitem>
+<para>Created new UML diagram to reflect the change in code structure</para>
+</listitem><listitem>
+<para>Created Stub Classes and Test cases stubs for the new UML</para>
+</listitem><listitem>
+<para>Created header and source files according to the stubs which passed the tests</para>
+</listitem><listitem>
+<para>Created a command line interface for controlling the fleet</para>
+</listitem><listitem>
+<para>Created a Graphical User Interface to communicate and control the robots</para>
+</listitem><listitem>
+<para>Created and released the package for the fleet system</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md7">
+<title>Old World Files</title>
+
+<para>Gazebo: Spawning Fleet of Huskies in temporary Dock Station ![image](<link xlink:href="https://user-images.githubusercontent.com/24978535/144908953-9a8ab76a-c516-43da-9176-961469c7d72a.png">https://user-images.githubusercontent.com/24978535/144908953-9a8ab76a-c516-43da-9176-961469c7d72a.png</link>)</para>
+
+<para>Rviz: Spawning Fleet of Huskies in temporary Dock Station ![image](<link xlink:href="https://user-images.githubusercontent.com/24978535/144908977-e60ed050-e89e-47d9-bfc4-a8884cad6ed5.png">https://user-images.githubusercontent.com/24978535/144908977-e60ed050-e89e-47d9-bfc4-a8884cad6ed5.png</link>)</para>
+
+<para>UMD Campus Map Mckeldin Library ![image](<link xlink:href="https://user-images.githubusercontent.com/24978535/144909022-c8d16ee7-5cba-4e44-b92f-40f51a340c25.png">https://user-images.githubusercontent.com/24978535/144909022-c8d16ee7-5cba-4e44-b92f-40f51a340c25.png</link>)</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md8">
+<title>New World File</title>
+
+<para>![WhatsApp Image 2021-12-13 at 1 38 50 PM](<link xlink:href="https://user-images.githubusercontent.com/24701030/145869779-927f3504-0829-4aa2-a879-3d29cdf2373f.jpeg">https://user-images.githubusercontent.com/24701030/145869779-927f3504-0829-4aa2-a879-3d29cdf2373f.jpeg</link>)</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md9">
+<title>Generated MAP for Localization</title>
+
+<para>![WhatsApp Image 2021-12-13 at 1 38 50 PM (1)](<link xlink:href="https://user-images.githubusercontent.com/24701030/145869826-e1cd3ff5-e092-478b-8c75-7b2f60e4a9a5.jpeg">https://user-images.githubusercontent.com/24701030/145869826-e1cd3ff5-e092-478b-8c75-7b2f60e4a9a5.jpeg</link>) ![WhatsApp Image 2021-12-13 at 1 38 50 PM (2)](<link xlink:href="https://user-images.githubusercontent.com/24701030/145869830-365af42b-4755-4056-8bdf-7190cc029418.jpeg">https://user-images.githubusercontent.com/24701030/145869830-365af42b-4755-4056-8bdf-7190cc029418.jpeg</link>)</para>
+</section>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md10">
+<title>Assumptions</title>
+
+<para><itemizedlist>
+<listitem>
+<para>The streets do not have any traffic or traffic signals, hence the robot can navigate freely on the pedestrian paths, except for a few obstacles along the way.</para>
+</listitem><listitem>
+<para>The obstacles present on the pedestrian paths are of dimensions such that they do not block the complete pathway and will allow the robot to maneuver around it.</para>
+</listitem><listitem>
+<para>The paths are even and do not contain extreme slopes.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md11">
+<title>Project tested on</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Ubuntu 20.04 using Noetic</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md12">
+<title>Technologies</title>
+
+<para>*Programing language*: C++</para>
+
+<para>*Build system*: cmake</para>
+
+<para>*Testing Library*: Google Test</para>
+
+<para>*Continuous Integration*: GitHub Actions CI, Coverall</para>
+
+<para>*Other*: ROS, Gazebo, RViz, Clearpath Husky</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md13">
+<title>Algorithms</title>
+
+<para><itemizedlist>
+<listitem>
+<para>husky_navigation package, which uses gmapping, move_base and frontier_exploration [BSD-3-Clause License].</para>
+</listitem><listitem>
+<para>CLI11 package for parsing command line input [BSD-3-Clause License].</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md14">
+<title>Risk and Mitigations</title>
+
+<para><itemizedlist>
+<listitem>
+<para>**Risk 1**: Error in Path planning Algorithm due to unknown constraints which might lead to delay in delivery time or failed delivery. Mitigation: This can be mitigated by improving the path planning algorithm by feeding the planning data to supervised learning ML algorithms and training the path planner to predict obstacles/possible unknown constraints.</para>
+</listitem><listitem>
+<para>**Risk 2**: Unexpected shutdown of ROS Master might lead to the shutdown of all the available agents/Robots. Mitigation: This risk can be mitigated by migrating the whole project to ROS2 or by integrating a ROS1 bridge with ROS2.</para>
+</listitem><listitem>
+<para>**Risk 3**: One of the sensors required for path planning might malfunction leading to erratic behavior. Mitigation: If such a condition occurs, the robot will be made to override the autonomous navigation signals and a human operator will manually control the robot.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md15">
+<title>Setbacks</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Due to narrow pathways, the robots are unable to find paths as the cost map generated have high padding. This can be mitigated by using smaller robots or by generating different paths.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md16">
+<title>Running the code</title>
+
+<para>ROS Noetic is required to run the code, it&apos;s installation can be found at [ROS Noetic installation](<link xlink:href="http://wiki.ros.org/noetic/Installation/Ubuntu">http://wiki.ros.org/noetic/Installation/Ubuntu</link>)</para>
+
+<para>As kivy is used for the GUI, it needs to be installed as follow</para>
+
+<para><literallayout><computeroutput>pip&#32;install&#32;https://github.com/kivymd/KivyMD/archive/master.zip
+</computeroutput></literallayout></para>
+
+<para>To run the code, first open a terminal and download the repository</para>
+
+<para><literallayout><computeroutput>git&#32;clone&#32;https://github.com/sumedhreddy90/MusketeersDeliveryFramework.git
+</computeroutput></literallayout></para>
+
+<para>Then, add the downloaded repository into your ROS workspace&apos;s src folder (eg. catkin_ws/src)</para>
+
+<para>After adding the repository, change the directory of the repository to the workspace repository</para>
+
+<para><literallayout><computeroutput>cd&#32;~/catkin_ws
+</computeroutput></literallayout></para>
+
+<para>To build the changes use <literallayout><computeroutput>catkin_make
+</computeroutput></literallayout></para>
+
+<para>To source the build files use <literallayout><computeroutput>source&#32;devel/setup.bash
+</computeroutput></literallayout></para>
+
+<para>Launch files are provided that will spawn multiple robots in a gazebo environment and will simultaneously open rviz. To use the launch file, run the following command in the same terminal <literallayout><computeroutput>roslaunch&#32;musky_nav&#32;multi_husky_delivery.launch&#32;
+</computeroutput></literallayout></para>
+
+<para>Wait for all the windows to open fully, which can be verified by checking the `ROS_INFO` message in the terminal where the above launch file was launched. It should display `Recovery behavior will clear layer &apos;obstacles&apos;`</para>
+
+<para>After getting the above message, open a new terminal and navigate to the ROS workspace, using <literallayout><computeroutput>cd&#32;~/catkin_ws
+</computeroutput></literallayout></para>
+
+<para>and source the build files <literallayout><computeroutput>source&#32;devel/setup.bash
+</computeroutput></literallayout></para>
+
+<para>To run the ROS node that controls the muskies, run the following code <literallayout><computeroutput>rosrun&#32;musky_nav&#32;musk_init&#32;__name:=node1&#32;1
+</computeroutput></literallayout></para>
+
+<para>Where `__name:=node1` is used to create the instance of the node with a specified name, and `1` specifies the robot ID. The general command line code would be <literallayout><computeroutput>rosrun&#32;musky_nav&#32;musk_init&#32;__name:=&lt;node&#32;name&gt;&#32;&lt;Robot&#32;ID&gt;
+</computeroutput></literallayout></para>
+
+<para>After the above command, the terminal will display all the options available for navigation <literallayout><computeroutput>Where&#32;do&#32;you&#32;want&#32;the&#32;robot&#32;to&#32;go?
+
+1&#32;=&#32;Musketeers_Base-Station&#32;:&#32;1&#32;
+2&#32;=&#32;Musketeers_Base-Station&#32;:&#32;2
+3&#32;=&#32;Musketeers_Base-Station&#32;:&#32;3
+4&#32;=&#32;Musketeers_Base-Station&#32;:&#32;4
+5&#32;=&#32;Chipotle
+6&#32;=&#32;Sub-way
+7&#32;=&#32;Taco-bell
+8&#32;=&#32;Panda&#32;Express
+9&#32;=&#32;Iribe
+10&#32;=&#32;Mckeldin&#32;Library
+11&#32;=&#32;J.M&#32;Patterson&#32;Hall
+12&#32;=&#32;Domain
+</computeroutput></literallayout></para>
+
+<para>Select one of the above mentioned options and the robot will plan the trajectory and will move accordingly</para>
+
+<para>The bases are configured to cater to only the closes restaurants, hence, selection of the pickup location can be done as follows</para>
+
+<para></para>
+
+<para>The robots can also be controlled via a GUI as follows</para>
+
+<para><literallayout><computeroutput>rosrun&#32;musky_nav&#32;musketeers_gui.py
+</computeroutput></literallayout></para>
+<section xml:id="_md__home_starfleeet-robotics__desktop__e_n_p_m808x_src__musketeers_delivery_framework__r_e_a_d_m_e_1autotoc_md17">
+<title>GUI</title>
+
+<para> </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba">
+<title>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src Directory Reference</title>
+<indexterm><primary>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src Directory Reference</primary></indexterm>
+Directory dependency graph for src:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_4e4e2e75df7fa6971448b424c011c8b5">GUI</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_main_8cpp">main.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__musky_nav_goal_8cpp">MuskyNavGoal.cpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

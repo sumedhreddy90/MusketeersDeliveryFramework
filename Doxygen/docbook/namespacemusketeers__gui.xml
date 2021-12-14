@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacemusketeers__gui">
+<title>musketeers_gui Namespace Reference</title>
+<indexterm><primary>musketeers_gui</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classmusketeers__gui_1_1_display_screen">DisplayScreen</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmusketeers__gui_1_1_icon_list_item">IconListItem</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmusketeers__gui_1_1_main_box">MainBox</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmusketeers__gui_1_1_musketeers_app">MusketeersApp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacemusketeers__gui_1adeab7d5237a576f39dd83f3269dd5a45">anonymous</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacemusketeers__gui_1a2d0d4838ac6b3f5ad10ab7cd3723dc1b">pub_base</link> = rospy.Publisher(&apos;/hsk01/move_base_simple/goal&apos;,PoseStamped, queue_size=10)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacemusketeers__gui_1a674f67ddf9d70ed30e467a2a1917950e">MyApp</link> = <link linkend="_classmusketeers__gui_1_1_musketeers_app">MusketeersApp</link>()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacemusketeers__gui_1adeab7d5237a576f39dd83f3269dd5a45"/>    <section>
+    <title>anonymous</title>
+<indexterm><primary>anonymous</primary><secondary>musketeers_gui</secondary></indexterm>
+<indexterm><primary>musketeers_gui</primary><secondary>anonymous</secondary></indexterm>
+<para><computeroutput>musketeers_gui.anonymous</computeroutput></para>    </section><anchor xml:id="_namespacemusketeers__gui_1a674f67ddf9d70ed30e467a2a1917950e"/>    <section>
+    <title>MyApp</title>
+<indexterm><primary>MyApp</primary><secondary>musketeers_gui</secondary></indexterm>
+<indexterm><primary>musketeers_gui</primary><secondary>MyApp</secondary></indexterm>
+<para><computeroutput>musketeers_gui.MyApp = <link linkend="_classmusketeers__gui_1_1_musketeers_app">MusketeersApp</link>()</computeroutput></para>    </section><anchor xml:id="_namespacemusketeers__gui_1a2d0d4838ac6b3f5ad10ab7cd3723dc1b"/>    <section>
+    <title>pub_base</title>
+<indexterm><primary>pub_base</primary><secondary>musketeers_gui</secondary></indexterm>
+<indexterm><primary>musketeers_gui</primary><secondary>pub_base</secondary></indexterm>
+<para><computeroutput>musketeers_gui.pub_base = rospy.Publisher(&apos;/hsk01/move_base_simple/goal&apos;,PoseStamped, queue_size=10)</computeroutput></para></section>
+</section>
+</section>

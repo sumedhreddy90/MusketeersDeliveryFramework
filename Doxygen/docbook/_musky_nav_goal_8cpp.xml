@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__musky_nav_goal_8cpp">
+<title>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/MuskyNavGoal.cpp File Reference</title>
+<indexterm><primary>/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/MuskyNavGoal.cpp</primary></indexterm>
+<programlisting>#include &quot;MuskyNavGoal.hpp&quot;
+</programlisting>Include dependency graph for MuskyNavGoal.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_musky_nav_goal_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

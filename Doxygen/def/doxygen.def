@@ -1,0 +1,1116 @@
+AutoGen Definitions dummy;
+class = {
+  cp-id     = 'classmusketeers__gui_1_1_display_screen';
+  cp-name   = 'musketeers_gui::DisplayScreen';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classkivymd_1_1uix_1_1gridlayout_1_1_m_d_grid_layout';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_display_screen_1abed1c130b941e59a468e7bc177ddef31';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'test';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '31';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+  cp-fileline  = '29';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.DisplayScreen';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_display_screen';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'MDGridLayout';
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.DisplayScreen';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_display_screen';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'MDGridLayout';
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classmusketeers__gui_1_1_icon_list_item';
+  cp-name   = 'musketeers_gui::IconListItem';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classkivymd_1_1uix_1_1list_1_1_one_line_icon_list_item';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-static-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_icon_list_item_1a56d79b5ae70130aad3fbd4b1ece576e6';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'icon';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  StringProperty()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '27';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+  cp-fileline  = '26';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'OneLineIconListItem';
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.IconListItem';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_icon_list_item';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'OneLineIconListItem';
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.IconListItem';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_icon_list_item';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classmusketeers__gui_1_1_main_box';
+  cp-name   = 'musketeers_gui::MainBox';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classkivymd_1_1uix_1_1boxlayout_1_1_box_layout';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-filename  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+  cp-fileline  = '23';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'BoxLayout';
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.MainBox';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_main_box';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'BoxLayout';
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.MainBox';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_main_box';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classmusketeers__gui_1_1_musketeers_app';
+  cp-name   = 'musketeers_gui::MusketeersApp';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classkivymd_1_1app_1_1_m_d_app';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a0d5ef0ae28ac017253bebc5225229b3c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '__init__';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+**
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'kwargs';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '36';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a6cf050da05b88b89659b9a8ecef8dd2c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'set_item';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+text_item
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'text_item';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '89';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1aa0e009c0b6c1e0255403977d15ef93e4';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'set_robot';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+robotlist
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'robotlist';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '170';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a5bd5bbee59cd01e383f871e9f87cee20';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'set_delivery';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delivery_type
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'delivery_type';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '177';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a1a44dd2dad2f466b7cdf953bd443db5a';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'set_location';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+location_list
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'location_list';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '259';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a1d4d01e941e404a2ce90f203c1381a97';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'start_mission';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+*
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'args';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '264';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a1a97f7c30a23eaf766767510d2d02e8a';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+def
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'build';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '289';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1adc4cb207917938b3e268a981756aacd9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'screen';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '38';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a72bcbaa1296415bc57fe3e9884b1e430';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'robot_var';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '39';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1ad79452d72d5558a4b98c51d93723c961';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'delivery_var';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '40';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a1120b0ae37363f2fc1e5f9cf368f8986';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'base_var';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '41';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a62e17233141ff0e64cbc4b18da4d013d';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'location_var';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '42';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1ac70c4784e0a6ec12cc882912eee90061';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'menu';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '53';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a35c4f512049388fe550812f3951c1d9c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'delivery_menu';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '76';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a07d7bde03d100b725995715a2df5ed3f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'robot_menu';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '103';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classmusketeers__gui_1_1_musketeers_app_1a27d21a9e563824281cffc938303b0749';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'location_menu';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      sec-mem-desc-line = '211';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+  cp-fileline  = '34';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.MusketeersApp';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_musketeers_app';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'MDApp';
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'musketeers_gui.MusketeersApp';
+        node-link = {
+          node-link-id = 'classmusketeers__gui_1_1_musketeers_app';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'MDApp';
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'class_musky_nav_goal';
+  cp-name   = 'MuskyNavGoal';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_musky_nav_goal_1ac589e67e56e90ebe03a88dfe6627e909';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+std::string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'concatMuskyId';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'musky_id';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '80';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+function to concatenate the musky_id and the our base_id.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This Function will concatenate the musky id with move_base
+       message which will be later used in MoveBaseClient.
+
+        This can be used to launch multiple robots.
+
+@param musky_id is a integer variable
+
+@return std::string bot
+
+@param int musky_id    is the Robot id musky_id
+@return bot <std::double> is the concatenated string
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_musky_nav_goal_1ab5d64e115a17b08d044a386a56d1eeae';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'MuskyNavGoal';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ros::NodeHandle
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'n';
+        sec-mem-param-defname = 'node';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'musky_id';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '89';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Default constructor for MuskNavGoal.This will setup our
+        velocity node by subscribing to it.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This is our constructor for MuskyNavGoal Class. It initializes the
+       velocity of the the husky by publishing to the /cmd_vel topic
+       of the musky robot.
+
+@param n - ROS nodehandle object
+
+@return void
+
+@param ros::NodeHandle node ros node handler object
+       int musky_id    is the Robot id musky_id
+@return None
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_musky_nav_goal_1a92d9b793348b18f52fa3f590aed7466e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '~MuskyNavGoal';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '98';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Destructor for MuskNavGoal.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Destructor for the MuskyNavGoal.
+
+@param none
+
+@return void
+
+@param none
+@return none
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_musky_nav_goal_1a1ca906071f4d2cba4391872457c987ce';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'muskySendGoal';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'musky_id';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '106';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+function to perform all the navigation tasks assigned
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This Function will navigate the robot to the user
+       selection.
+
+@param none
+
+@return void
+
+@param int musky_id    is the Robot id musky_id
+@return None
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_musky_nav_goal_1a246f7561dbb51a429d239e73cc79f9da';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'musky_id';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '71';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_musky_nav_goal_1a6b07bc619e9e94b56ab5d7c95d3d2d60';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+ros::NodeHandle
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'n';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '59';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_musky_nav_goal_1aa1143cf24afa28bb3170a9a489a08deb';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+tf2::Quaternion
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'my_quat_from_euler';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '61';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_musky_nav_goal_1a13fb3ae85d7903c23a2ea626757c6851';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'client_status';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= true
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '64';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+ROS tf2 transform for converting the RPY to
+ Quaternion using tf2/Quaternion.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_musky_nav_goal_1aeaf135320bbc7dcfc5e782e208a1e878';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'status';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= true
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '66';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+flag to check whether action client has been
+       established
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_musky_nav_goal_1aafc05a908971a29b57f5eedc25453d59';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'location';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '67';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+flag to navigate the robot to different locations
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_musky_nav_goal_1a81e1f500886b3940f6e274ac123968e6';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+std::string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'bot';
+      sec-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      sec-mem-desc-line = '68';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+goal selection variable
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+  cp-fileline  = '57';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Class MuskNavGoal.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+The following class MuskNavGoal implements the navigation stack
+for the musky robots to navigate to different base locations or
+goal positions.
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+file = {
+  file-id   = '_c_make_lists_8txt';
+  file-name = 'CMakeLists.txt';
+  file-full-name  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/CMakeLists.txt';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_musky_nav_goal_8hpp';
+  file-name = 'MuskyNavGoal.hpp';
+    typedef = {
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = '_musky_nav_goal_8hpp_1a21e20cc0b6656ae897b3cbb969b93241';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+actionlib::SimpleActionClient< move_base_msgs::MoveBaseAction >
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'MoveBaseClient';
+      typedef-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+      typedef-mem-desc-line = '48';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    };
+  file-full-name  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/include/MuskyNavGoal.hpp';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_r_e_a_d_m_e_8md';
+  file-name = 'README.md';
+  file-full-name  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/README.md';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'musketeers__gui_8py';
+  file-name = 'musketeers_gui.py';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'namespacemusketeers__gui_1adeab7d5237a576f39dd83f3269dd5a45';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'anonymous';
+      var-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      var-mem-desc-line = '296';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'namespacemusketeers__gui_1a2d0d4838ac6b3f5ad10ab7cd3723dc1b';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'pub_base';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  rospy.Publisher('/hsk01/move_base_simple/goal',PoseStamped, queue_size=10)
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      var-mem-desc-line = '297';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'namespacemusketeers__gui_1a674f67ddf9d70ed30e467a2a1917950e';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'MyApp';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  MusketeersApp()
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+      var-mem-desc-line = '299';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/GUI/musketeers_gui.py';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'main_8cpp';
+  file-name = 'main.cpp';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'main';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'argc';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+char **
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'argv';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/main.cpp';
+      func-mem-desc-line = '26';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/main.cpp';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_musky_nav_goal_8cpp';
+  file-name = 'MuskyNavGoal.cpp';
+  file-full-name  = '/home/starfleeet-robotics/Desktop/ENPM808x/src/MusketeersDeliveryFramework/src/MuskyNavGoal.cpp';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */

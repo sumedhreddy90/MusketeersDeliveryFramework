@@ -1,0 +1,167 @@
+\hypertarget{class_musky_nav_goal}{}\doxysection{Musky\+Nav\+Goal Class Reference}
+\label{class_musky_nav_goal}\index{MuskyNavGoal@{MuskyNavGoal}}
+
+
+Class Musk\+Nav\+Goal.  
+
+
+
+
+{\ttfamily \#include $<$Musky\+Nav\+Goal.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_musky_nav_goal_ac589e67e56e90ebe03a88dfe6627e909}{concat\+Musky\+Id}} (int \mbox{\hyperlink{class_musky_nav_goal_a246f7561dbb51a429d239e73cc79f9da}{musky\+\_\+id}})
+\begin{DoxyCompactList}\small\item\em function to concatenate the musky\+\_\+id and the our base\+\_\+id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_musky_nav_goal_ab5d64e115a17b08d044a386a56d1eeae}{Musky\+Nav\+Goal}} (ros\+::\+Node\+Handle n, int \mbox{\hyperlink{class_musky_nav_goal_a246f7561dbb51a429d239e73cc79f9da}{musky\+\_\+id}})
+\begin{DoxyCompactList}\small\item\em Default constructor for Musk\+Nav\+Goal.\+This will setup our velocity node by subscribing to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_musky_nav_goal_a92d9b793348b18f52fa3f590aed7466e}{$\sim$\+Musky\+Nav\+Goal}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for Musk\+Nav\+Goal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_musky_nav_goal_a1ca906071f4d2cba4391872457c987ce}{musky\+Send\+Goal}} (int \mbox{\hyperlink{class_musky_nav_goal_a246f7561dbb51a429d239e73cc79f9da}{musky\+\_\+id}})
+\begin{DoxyCompactList}\small\item\em function to perform all the navigation tasks assigned \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_musky_nav_goal_a246f7561dbb51a429d239e73cc79f9da}{musky\+\_\+id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class Musk\+Nav\+Goal. 
+
+The following class Musk\+Nav\+Goal implements the navigation stack for the musky robots to navigate to different base locations or goal positions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_musky_nav_goal_ab5d64e115a17b08d044a386a56d1eeae}\label{class_musky_nav_goal_ab5d64e115a17b08d044a386a56d1eeae}} 
+\index{MuskyNavGoal@{MuskyNavGoal}!MuskyNavGoal@{MuskyNavGoal}}
+\index{MuskyNavGoal@{MuskyNavGoal}!MuskyNavGoal@{MuskyNavGoal}}
+\doxysubsubsection{\texorpdfstring{MuskyNavGoal()}{MuskyNavGoal()}}
+{\footnotesize\ttfamily Musky\+Nav\+Goal\+::\+Musky\+Nav\+Goal (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{node,  }\item[{int}]{musky\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor for Musk\+Nav\+Goal.\+This will setup our velocity node by subscribing to it. 
+
+This is our constructor for \mbox{\hyperlink{class_musky_nav_goal}{Musky\+Nav\+Goal}} Class. It initializes the velocity of the the husky by publishing to the /cmd\+\_\+vel topic of the musky robot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ R\+OS nodehandle object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ros\+::\+Node\+Handle} & node ros node handler object int musky\+\_\+id is the Robot id musky\+\_\+id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_musky_nav_goal_a92d9b793348b18f52fa3f590aed7466e}\label{class_musky_nav_goal_a92d9b793348b18f52fa3f590aed7466e}} 
+\index{MuskyNavGoal@{MuskyNavGoal}!````~MuskyNavGoal@{$\sim$MuskyNavGoal}}
+\index{````~MuskyNavGoal@{$\sim$MuskyNavGoal}!MuskyNavGoal@{MuskyNavGoal}}
+\doxysubsubsection{\texorpdfstring{$\sim$MuskyNavGoal()}{~MuskyNavGoal()}}
+{\footnotesize\ttfamily Musky\+Nav\+Goal\+::$\sim$\+Musky\+Nav\+Goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for Musk\+Nav\+Goal. 
+
+Destructor for the \mbox{\hyperlink{class_musky_nav_goal}{Musky\+Nav\+Goal}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_musky_nav_goal_ac589e67e56e90ebe03a88dfe6627e909}\label{class_musky_nav_goal_ac589e67e56e90ebe03a88dfe6627e909}} 
+\index{MuskyNavGoal@{MuskyNavGoal}!concatMuskyId@{concatMuskyId}}
+\index{concatMuskyId@{concatMuskyId}!MuskyNavGoal@{MuskyNavGoal}}
+\doxysubsubsection{\texorpdfstring{concatMuskyId()}{concatMuskyId()}}
+{\footnotesize\ttfamily std\+::string Musky\+Nav\+Goal\+::concat\+Musky\+Id (\begin{DoxyParamCaption}\item[{int}]{musky\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+function to concatenate the musky\+\_\+id and the our base\+\_\+id. 
+
+This Function will concatenate the musky id with move\+\_\+base message which will be later used in Move\+Base\+Client.
+
+This can be used to launch multiple robots.
+
+
+\begin{DoxyParams}{Parameters}
+{\em musky\+\_\+id} & is a integer variable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string bot
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em int} & musky\+\_\+id is the Robot id musky\+\_\+id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bot $<$std\+::double$>$ is the concatenated string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_musky_nav_goal_a1ca906071f4d2cba4391872457c987ce}\label{class_musky_nav_goal_a1ca906071f4d2cba4391872457c987ce}} 
+\index{MuskyNavGoal@{MuskyNavGoal}!muskySendGoal@{muskySendGoal}}
+\index{muskySendGoal@{muskySendGoal}!MuskyNavGoal@{MuskyNavGoal}}
+\doxysubsubsection{\texorpdfstring{muskySendGoal()}{muskySendGoal()}}
+{\footnotesize\ttfamily void Musky\+Nav\+Goal\+::musky\+Send\+Goal (\begin{DoxyParamCaption}\item[{int}]{musky\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+function to perform all the navigation tasks assigned 
+
+This Function will navigate the robot to the user selection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em int} & musky\+\_\+id is the Robot id musky\+\_\+id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_musky_nav_goal_a246f7561dbb51a429d239e73cc79f9da}\label{class_musky_nav_goal_a246f7561dbb51a429d239e73cc79f9da}} 
+\index{MuskyNavGoal@{MuskyNavGoal}!musky\_id@{musky\_id}}
+\index{musky\_id@{musky\_id}!MuskyNavGoal@{MuskyNavGoal}}
+\doxysubsubsection{\texorpdfstring{musky\_id}{musky\_id}}
+{\footnotesize\ttfamily int Musky\+Nav\+Goal\+::musky\+\_\+id}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/starfleeet-\/robotics/\+Desktop/\+E\+N\+P\+M808x/src/\+Musketeers\+Delivery\+Framework/include/\mbox{\hyperlink{_musky_nav_goal_8hpp}{Musky\+Nav\+Goal.\+hpp}}\item 
+/home/starfleeet-\/robotics/\+Desktop/\+E\+N\+P\+M808x/src/\+Musketeers\+Delivery\+Framework/src/\mbox{\hyperlink{_musky_nav_goal_8cpp}{Musky\+Nav\+Goal.\+cpp}}\end{DoxyCompactItemize}
