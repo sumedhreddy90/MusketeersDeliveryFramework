@@ -1,0 +1,11 @@
+Done processing MuskyNavGoal.cpp
+Done processing main.cpp
+MuskyNavGoal.hpp:27:  #ifndef header guard has wrong style, please use: INCLUDE_MUSKYNAVGOAL_HPP_  [build/header_guard] [5]
+MuskyNavGoal.hpp:109:  #endif line should be "#endif  // INCLUDE_MUSKYNAVGOAL_HPP_"  [build/header_guard] [5]
+MuskyNavGoal.hpp:39:  Found C++ system header after other header. Should be: MuskyNavGoal.h, c system, c++ system, other.  [build/include_order] [4]
+MuskyNavGoal.hpp:40:  Found C++ system header after other header. Should be: MuskyNavGoal.h, c system, c++ system, other.  [build/include_order] [4]
+MuskyNavGoal.hpp:41:  Found C++ system header after other header. Should be: MuskyNavGoal.h, c system, c++ system, other.  [build/include_order] [4]
+MuskyNavGoal.hpp:42:  Found C++ system header after other header. Should be: MuskyNavGoal.h, c system, c++ system, other.  [build/include_order] [4]
+MuskyNavGoal.hpp:80:  Add #include <string> for string  [build/include_what_you_use] [4]
+Done processing MuskyNavGoal.hpp
+Total errors found: 7
