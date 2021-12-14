@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated">
-<title>Class List</title>
-Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_classmusketeers__gui_1_1_display_screen">musketeers_gui.DisplayScreen</link><link linkend="_classmusketeers__gui_1_1_icon_list_item">musketeers_gui.IconListItem</link><link linkend="_classmusketeers__gui_1_1_main_box">musketeers_gui.MainBox</link><link linkend="_classmusketeers__gui_1_1_musketeers_app">musketeers_gui.MusketeersApp</link><link linkend="_class_musky_nav_goal">MuskyNavGoal</link>
-<para>Class MuskNavGoal </para>
-</section>
