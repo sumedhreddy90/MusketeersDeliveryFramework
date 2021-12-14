@@ -20,9 +20,10 @@
  *
  */
 #include <ros/ros.h>
+
 #include "MuskyNavGoal.hpp"
 
-int main(int argc, char** argv){
+int main(int argc, char** argv) {
   // Using command line parser to take the robot id
   CLI::App fleet{"Welcome to Musketeers Fleet Hub"};
   // Connect to ROS
@@ -32,24 +33,23 @@ int main(int argc, char** argv){
   int musky_id;
   // float x,y,roll,pitch,yaw;
   // Adding an option to the fleet parser i.e muskyid to choose from 20 agents.
-  fleet.add_option("musk_id",musky_id , "Musk_ID (1-20)");
+  fleet.add_option("musk_id", musky_id, "Musk_ID (1-20)");
   // parsing the data from the cmd line
   CLI11_PARSE(fleet, argc, argv);
   // Instantiating our MuskyNavGoal Class by creating a musky instance
-  MuskyNavGoal musky(nh,musky_id);
+  MuskyNavGoal musky(nh, musky_id);
 
   ros::Rate loop_rate(10);
 
   ros::spinOnce();
   // After taking the commands from the user we then send our musky
   // robot to the desired location based upon user selection.
-  while ( ros::ok() ) {
-      ros::spinOnce();
-      // we then call our muskySendGoal to send musky robot with 
-      // muskyid to desired goal position.
-      musky.muskySendGoal(musky_id);
-      loop_rate.sleep();
+  while (ros::ok()) {
+    ros::spinOnce();
+    // we then call our muskySendGoal to send musky robot with
+    // muskyid to desired goal position.
+    musky.muskySendGoal(musky_id);
+    loop_rate.sleep();
   }
   return 0;
 }
-
