@@ -114,6 +114,14 @@ operator will manually control the robot.
 
 ## Running the code
 
+ROS Noetic is required to run the code, it's installation can be found at [ROS Noetic installation](http://wiki.ros.org/noetic/Installation/Ubuntu)
+
+As kivy is used for the GUI, it needs to be installed as follow
+
+```
+pip install https://github.com/kivymd/KivyMD/archive/master.zip
+```
+
 To run the code, first open a terminal and download the repository
 
 ```
