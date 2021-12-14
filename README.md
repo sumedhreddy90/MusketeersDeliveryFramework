@@ -201,3 +201,34 @@ rosrun musky_nav musketeers_gui.py
 #### GUI 
 ![WhatsApp Image 2021-12-13 at 11 00 18 AM](https://user-images.githubusercontent.com/24701030/145869304-9392391b-51a4-4114-93a0-f74b49ca2876.jpeg)
 
+### Testing
+
+To run the tests, run the following command from the workspace directory
+
+```
+rostest musky_nav ros_test.launch
+```
+Result for it would be
+```
+... logging to /home/starfleeet-robotics/.ros/log/rostest-starfleeet-25046.log
+[ROSUNIT] Outputting test results to /home/starfleeet-robotics/.ros/test_results/musky_nav/rostest-test_ros_test.xml
+[ INFO] [1639456426.976681234]: Waiting for the move_base action server to come up
+[ INFO] [1639456431.979700155]: Waiting for the move_base action server to come up
+[ INFO] [1639456436.979872319]: Waiting for the move_base action server to come up
+[ INFO] [1639456441.980030316]: Waiting for the move_base action server to come up
+[ INFO] [1639456446.980227198]: Waiting for the move_base action server to come up
+[Testcase: testmusketeersTests] ... ok
+
+[ROSTEST]-----------------------------------------------------------------------
+
+[musky_nav.rosunit-musketeersTests/muskNavTest][passed]
+[musky_nav.rosunit-musketeersTests/CommandVelTest][passed]
+[musky_nav.rosunit-musketeersTests/concatTest][passed]
+[musky_nav.rosunit-musketeersTests/master_test][passed]
+
+SUMMARY
+ * RESULT: SUCCESS
+ * TESTS: 4
+ * ERRORS: 0
+ * FAILURES: 0
+```
