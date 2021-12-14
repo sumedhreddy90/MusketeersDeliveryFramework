@@ -20,7 +20,8 @@ This repository contains a multi-robot autonomous delivery framework, that works
 ### UML
 [Quad Chart](https://drive.google.com/file/d/112d7ZOfGakJW6sQtDZE99uixeMIY7aPG/view?usp=sharing) \
 [Project Proposal](https://drive.google.com/file/d/1M1FodIeb_yLv4JwdbofX3ztwyTm6bGPM/view?usp=sharing) \
-
+[Activity Diagram](https://drive.google.com/file/d/1Tu6yAAuHe9edw5sUqZ6b6rdyhWe9690b/view?usp=sharing) \
+[Class Diagram](https://drive.google.com/file/d/1F0wCk2moPsRFCpEKdf5eaZrsnagD0Mt8/view?usp=sharing)
 
 
 ### AIP Document 
@@ -39,14 +40,7 @@ This repository contains a multi-robot autonomous delivery framework, that works
 * Created a Graphical User Interface to communicate and control the robots
 * Created and released the package for the fleet system
 
-### Presentaion Links 
-[Presentation PPT](https://drive.google.com/file/d/1DYCjtVKh_N355wW-lCqWUxPlOrV-pOAf/view?usp=sharing) \
-[Presentation Demo](https://youtu.be/GT90a_htJZU) 
-### Demo Video links
-[Demo Musky Single Robot](https://youtu.be/gXPuU7SFJIQ) \
-[Demo Multiple Musky Robot](https://youtu.be/AbQy4rUTcHE) \
-[Demo Multiple Musky Robot with obstacle avoidance](https://youtu.be/RAuY9NLsP7U) \
-+ 
+
 
 ### Old World Files
 Gazebo: Spawning Fleet of Huskies in temporary Dock Station ![image](https://user-images.githubusercontent.com/24978535/144908953-9a8ab76a-c516-43da-9176-961469c7d72a.png)
@@ -88,7 +82,7 @@ not contain extreme slopes.
 
 *Continuous Integration*: GitHub Actions CI, Coverall
 
-*Other*: ROS, Gazebo, RViz, Clearpath Husky, Kivy(For GUI)
+*Other*: ROS, Gazebo, RViz, Clearpath Husky
 
 
 
@@ -119,6 +113,14 @@ operator will manually control the robot.
 * Due to narrow pathways, the robots are unable to find paths as the cost map generated have high padding. This can be mitigated by using smaller robots or by generating different paths. 
 
 ## Running the code
+
+ROS Noetic is required to run the code, it's installation can be found at [ROS Noetic installation](http://wiki.ros.org/noetic/Installation/Ubuntu)
+
+As kivy is used for the GUI, it needs to be installed as follow
+
+```
+pip install https://github.com/kivymd/KivyMD/archive/master.zip
+```
 
 To run the code, first open a terminal and download the repository
 
